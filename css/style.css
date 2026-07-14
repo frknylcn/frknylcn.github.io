@@ -1,0 +1,32 @@
+/* Genel Stil */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* Hover Efektleri */
+a {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section İyileştirme */
+section.min-h-screen {
+    background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+}
+
+/* Kart Stilleri (Projeler için ileride kullanacağız) */
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+}
