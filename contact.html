@@ -113,17 +113,13 @@
     <script src="js/main.js"></script>
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800 bg-zinc-950 py-12 mt-20">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-zinc-500">
-                &copy; 2026 Furkan Yalçın • 
-                <span class="text-purple-400">Bilgisayar Mühendisi</span>
-            </p>
-            <p class="text-zinc-600 text-sm mt-2">
-                Bu site Grok ile geliştirildi
-            </p>
-        </div>
-    </footer>
+<footer class="border-t border-zinc-800 bg-zinc-950 py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-zinc-400 text-lg mb-3">Furkan Yalçın</p>
+        <p class="text-zinc-500">© 2026 • Bilgisayar Mühendisi</p>
+        <p class="text-zinc-600 text-sm mt-8">Bu site Grok ile birlikte geliştirildi</p>
+    </div>
+</footer>
     <script>
     const menuBtn = document.getElementById('menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -132,6 +128,21 @@
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('active');
     });
+</script>
+<!-- Back to Top -->
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<script>
+// Back to Top Butonu
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backToTop.style.display = 'flex';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
 </script>
 
 
