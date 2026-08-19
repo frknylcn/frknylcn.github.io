@@ -121,6 +121,13 @@ const blogPosts = [
         summary: "Bir Android uygulamasını Google Play'e hazırlarken AAB oluşturma, mağaza girişi, kapalı test ve yayınlama sürecinde öğrendiklerimi paylaşıyorum.",
         link: "blog-google-play.html",
         category: "Android • Google Play"
+    },
+    {
+        title: "Godot ile Karanlık Madenci'yi Geliştirirken Öğrendiklerim",
+        date: "19 Ağustos 2026",
+        summary: "Godot ile geliştirdiğim 2D madencilik oyununda TileMap, envanter, dinamit, mobil kontroller ve hata ayıklama süreçlerinde öğrendiklerimi anlatıyorum.",
+        link: "blog-karanlik-madenci.html",
+        category: "Godot • GDScript"
     }
 ];
 
