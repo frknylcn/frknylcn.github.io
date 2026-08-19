@@ -17,7 +17,7 @@ const projects = [
         status: "Android Uygulaması"
     },
     {
-        title: "2D Tower Defense",
+        title: "Haspet Defense",
         description: "Godot ile geliştirdiğim 2D strateji oyunu. Oyuncular asker üreterek kendi kalelerini korurken rakip kaleyi yok etmeye çalışıyor.",
         tech: "Godot • GDScript",
         link: "#",
