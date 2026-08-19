@@ -1,12 +1,126 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* =====================================================
+   FURKAN YALÇIN PORTFOLIO
+   Global UI / Design System
+===================================================== */
 
-/* Premium Renk Paleti - 2026 Trend */
+
+/* =====================================================
+   RENKLER
+===================================================== */
+
 :root {
-    --primary: 168 85 247;     /* Mor */
+    --primary: 168 85 247;
     --primary-light: 192 38 211;
+
+    --background: #09090b;
+    --surface: #18181b;
+    --surface-light: #27272a;
+
+    --border: rgba(161, 161, 170, 0.12);
+    --border-hover: rgba(168, 85, 247, 0.75);
+
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+
+    --purple-glow: rgba(168, 85, 247, 0.18);
 }
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text-primary);
+
+    overflow-x: hidden;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Metin seçimi */
+
+::selection {
+    background: rgba(168, 85, 247, 0.8);
+    color: white;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+p {
+    line-height: 1.7;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   FOCUS / ACCESSIBILITY
+===================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid rgb(var(--primary));
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--primary));
+}
+
+
+/* =====================================================
+   HELPERS
+===================================================== */
 
 .bg-primary {
     background-color: rgb(var(--primary));
@@ -16,108 +130,539 @@
     color: rgb(var(--primary));
 }
 
-/* Yumuşak Gradientler */
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .hero-gradient {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1033 50%, #0a0a0a 100%);
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(126, 34, 206, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(168, 85, 247, 0.1),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #09090b 0%,
+            #120b20 50%,
+            #09090b 100%
+        );
 }
 
-.card-gradient {
-    background: linear-gradient(145deg, rgba(30, 30, 40, 0.95), rgba(15, 15, 25, 0.95));
+
+/* Hafif noise hissi */
+
+.hero-gradient::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            transparent
+        );
 }
 
-body {
-    font-family: 'Inter', system-ui, sans-serif;
+
+/* =====================================================
+   GRADIENT TEXT
+===================================================== */
+
+.gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            #d946ef,
+            #a855f7,
+            #7e22ce
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% auto;
+
+    animation: gradientMove 6s ease infinite;
 }
 
-h1, h2, h3, h4 {
-    font-weight: 700;
-    letter-spacing: -0.04em;
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
 }
 
-/* Premium Kart Stili */
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+nav a {
+    position: relative;
+}
+
+
+/* Menü linki hover çizgisi */
+
+nav a:not(.no-nav-effect)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #d946ef
+        );
+
+    border-radius: 999px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+nav a:not(.no-nav-effect):hover::after {
+    width: 45%;
+}
+
+
+/* =====================================================
+   GENEL KART
+===================================================== */
+
 .card {
-    background: rgba(24, 24, 27, 0.8);
-    border: 1px solid rgba(163, 163, 163, 0.1);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 30, 36, 0.92),
+            rgba(15, 15, 20, 0.95)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .card:hover {
-    border-color: rgb(168, 85, 247);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 
-                0 8px 10px -6px rgb(0 0 0 / 0.3);
+    border-color: var(--border-hover);
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 50px -20px rgba(0, 0, 0, 0.7),
+        0 0 35px -15px var(--purple-glow);
 }
 
-/* Gradient Text */
-.gradient-text {
-    background: linear-gradient(90deg, #c026d3, #7e22ce, #a855f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-/* Smooth ve Modern Efektler */
-section {
-    scroll-margin-top: 80px;
-}
+/* =====================================================
+   PROJECT CARDS
+===================================================== */
 
-/* Hover Scale */
-.hover-scale {
-    transition: transform 0.4s ease;
-}
-
-.hover-scale:hover {
-    transform: scale(1.03);
-}
-
-@keyframes scroll {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(20px); }
-}
-
-.animate-scroll {
-    animation: scroll 1.5s infinite;
-}
-/* Modern Kart Tasarımı */
 .project-card {
-    background: rgba(24, 24, 27, 0.85);
-    border: 1px solid rgba(163, 163, 163, 0.08);
-    transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 24, 27, 0.92),
+            rgba(15, 15, 18, 0.96)
+        );
+
+    border: 1px solid rgba(161, 161, 170, 0.1);
+
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(168, 85, 247, 0.04),
+            transparent 40%
+        );
 }
 
 .project-card:hover {
-    border-color: rgb(168 85 247);
-    transform: translateY(-12px);
-    box-shadow: 0 30px 40px -15px rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.7);
+
+    transform: translateY(-9px);
+
+    box-shadow:
+        0 30px 60px -25px rgba(0, 0, 0, 0.85),
+        0 0 40px -20px rgba(168, 85, 247, 0.35);
 }
 
-/* Blog Kartı */
+
+/* Proje görselleri */
+
+.project-card img {
+    transition:
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        filter 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.045);
+    filter: brightness(1.05);
+}
+
+
+/* =====================================================
+   BLOG CARDS
+===================================================== */
+
 .blog-card {
-    transition: all 0.4s ease;
+    position: relative;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .blog-card:hover {
     transform: translateY(-6px);
+
+    border-color: rgba(168, 85, 247, 0.55);
+
+    box-shadow:
+        0 20px 45px -25px rgba(168, 85, 247, 0.3);
 }
-/* Back to Top Butonu */
+
+
+/* =====================================================
+   BUTTON / LINK EFFECTS
+===================================================== */
+
+button,
+a {
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:active,
+a:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================================
+   HOVER SCALE
+===================================================== */
+
+.hover-scale {
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.025);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+input,
+textarea {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgb(var(--primary));
+
+    box-shadow:
+        0 0 0 3px rgba(168, 85, 247, 0.08);
+}
+
+
+/* Autofill rengini düzelt */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #f4f4f5;
+
+    -webkit-box-shadow:
+        0 0 0 1000px #09090b inset;
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(32px);
+
+    transition:
+        opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* Kartların biraz farklı zamanda gelmesi için */
+
+.reveal-delay-1 {
+    transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.24s;
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+@keyframes scroll {
+
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(17px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.animate-scroll {
+    animation:
+        scroll 1.8s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
 #back-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: rgb(168 85 247);
-    color: white;
+
+    bottom: 28px;
+    right: 28px;
+
     width: 50px;
     height: 50px;
+
     border-radius: 9999px;
+
     display: none;
+
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
-    z-index: 50;
-    transition: all 0.3s ease;
+
+    color: white;
+
+    font-size: 21px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #a855f7
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 15px 35px -10px rgba(168, 85, 247, 0.55);
+
+    z-index: 60;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
 #back-to-top:hover {
-    transform: scale(1.1);
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    box-shadow:
+        0 20px 45px -12px rgba(168, 85, 247, 0.75);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+footer a:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    h1 {
+        letter-spacing: -0.025em;
+    }
+
+    h2,
+    h3 {
+        letter-spacing: -0.02em;
+    }
+
+    .project-card:hover,
+    .card:hover,
+    .blog-card:hover {
+        transform: translateY(-4px);
+    }
+
+    #back-to-top {
+        right: 18px;
+        bottom: 18px;
+
+        width: 46px;
+        height: 46px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
