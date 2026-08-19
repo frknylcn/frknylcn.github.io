@@ -27,4 +27,19 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://frknylcn.github.io/portfolio/blog-google-play.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://frknylcn.github.io/portfolio/blog-karanlik-madenci.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://frknylcn.github.io/portfolio/blog-portfolio.html</loc>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
