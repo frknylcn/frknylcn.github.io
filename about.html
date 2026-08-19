@@ -1,127 +1,497 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Hakkımda - Furkan Yalçın</title>
+
+    <meta name="description"
+        content="Furkan Yalçın - Bilgisayar Mühendisliği öğrencisi. Yazılım geliştirme, oyun geliştirme, web teknolojileri ve projelerim hakkında bilgiler.">
+
+    <meta name="author" content="Furkan Yalçın">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
+
+
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
-    
-    <!-- Navigation (önceki kodunla aynı kalsın) -->
 
-    <div class="max-w-4xl mx-auto px-6 py-20">
-        <h2 class="text-5xl font-bold mb-4 text-center">Hakkımda</h2>
-        <p class="text-zinc-400 text-lg mb-12 text-center">Kendi yolumu çizmek ve teknoloji dünyasında iz bırakmak için sürekli öğreniyorum.</p>        
+    <!-- NAVIGATION -->
+    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
 
-      <div class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
-    <p>
-        Merhaba, ben Furkan Yalçın. Yalova Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. 
-        Yazılım dünyasına olan ilgim liseden beri sürüyor. Şu anda <strong>web geliştirme</strong>, <strong>siber güvenlik</strong> ve genel yazılım alanlarında kendimi geliştiriyorum.
-    </p>
-    
-    <p>
-        Grok ile tanıştıktan sonra bu portfolio sitemi sıfırdan tasarladım. Bu sayede HTML, CSS, JavaScript ve Tailwind CSS gibi teknolojileri uygulamalı olarak öğrendim. 
-        Aynı zamanda <strong>Kali Linux</strong> kullanarak siber güvenlik dünyasına ilk adımlarımı attım.
-    </p>
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
 
-    <h3 class="text-3xl font-semibold mt-16 mb-8 text-purple-400">Şu Anda Ne Üzerinde Çalışıyorum?</h3>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-zinc-300">
-        <li class="flex items-start gap-3">• Web Geliştirme (Frontend)</li>
-        <li class="flex items-start gap-3">• Siber Güvenlik ve Etik Hacking (Kali Linux)</li>
-        <li class="flex items-start gap-3">• Oyun Geliştirme (Godot)</li>
-        <li class="flex items-start gap-3">• Genel Yazılım Mimarisi ve Algoritmalar</li>
-        <li class="flex items-start gap-3">• Prompt Engineering & Yapay Zeka Araçları</li>
-    </ul>
+            <h1 class="text-3xl font-bold tracking-tight">
+                KaranlıkYol
+            </h1>
 
-    <h3 class="text-3xl font-semibold mt-16 mb-8 text-purple-400">Yaklaşımım</h3>
-    <p class="text-zinc-300">
-        Henüz uzman değilim ama öğrenme sürecimi projeler yaparak ilerletiyorum. Her yeni teknolojiyi teoride öğrenip hemen uygulamaya döküyorum. 
-        Bu portfolio sitem de bu yaklaşımın bir ürünü. Sürekli öğreniyor, deniyor ve geliştiriyorum.
-    </p>
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex space-x-8 text-lg">
 
-    <h3 class="text-3xl font-semibold mt-16 mb-8 text-purple-400">Gelecek Hedeflerim</h3>
-    <p class="text-zinc-300">
-        Kısa vadede siber güvenlik ve web geliştirme alanında staj yaparak tecrübe kazanmak istiyorum. 
-        Uzun vadede ise hem güvenli web uygulamaları hem de kendi oyunlarımı geliştirerek sektöre katkı sağlamak istiyorum.
-    </p>
-</div>
-    <h3 class="text-3xl font-semibold mt-20 mb-10 text-purple-400">Teknolojiler ve Becerilerim</h3>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center hover:border-purple-500 transition">
-        <p class="text-xl font-medium">HTML / CSS</p>
-    </div>
-    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center hover:border-purple-500 transition">
-        <p class="text-xl font-medium">JavaScript</p>
-    </div>
-    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center hover:border-purple-500 transition">
-        <p class="text-xl font-medium">Tailwind CSS</p>
-    </div>
-    <!-- Diğer becerilerini buraya ekleyebilirsin -->
-                 <h3 class="text-3xl font-semibold mt-20 mb-12 text-purple-400">Eğitim ve Deneyimlerim</h3>
-            
-            <div class="space-y-12">
-                <!-- Eğitim 1 -->
-                <div class="flex gap-8">
-                    <div class="w-28 text-right flex-shrink-0">
-                        <p class="text-purple-400 font-medium">2024 - Devam</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold">Bilgisayar Mühendisliği</h4>
-                        <p class="text-zinc-400">Yalova Üniversitesi</p>
-                        <p class="text-sm text-zinc-500 mt-2">Şu anda 1. sınıf öğrencisiyim. Web geliştirme ve oyun tasarımı üzerine odaklanıyorum.</p>
-                    </div>
-                </div>
+                <a href="index.html"
+                    class="hover:text-purple-400 transition">
+                    Ana Sayfa
+                </a>
 
-                <!-- Eğitim 2 -->
-                <div class="flex gap-8">
-                    <div class="w-28 text-right flex-shrink-0">
-                        <p class="text-purple-400 font-medium">2018 - 2022</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold">Lise</h4>
-                        <p class="text-sm text-zinc-500 mt-2">Sayısal bölüm. Yazılıma olan ilgim burada başladı.</p>
-                    </div>
-                </div>
+                <a href="projects.html"
+                    class="hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="blog.html"
+                    class="hover:text-purple-400 transition">
+                    Blog
+                </a>
+
+                <a href="about.html"
+                    class="text-purple-400">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html"
+                    class="hover:text-purple-400 transition">
+                    İletişim
+                </a>
+
             </div>
-</div>  
-</div>
-    <!-- Footer -->
-<footer class="border-t border-zinc-800 bg-zinc-950 py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-zinc-400 text-lg mb-3">Furkan Yalçın</p>
-        <p class="text-zinc-500">© 2026 • Bilgisayar Mühendisi</p>
-        <p class="text-zinc-600 text-sm mt-8">Bu site Grok ile birlikte geliştirildi</p>
-    </div>
-</footer>
+
+            <!-- Mobil Hamburger -->
+            <button
+                id="menu-button"
+                class="md:hidden text-4xl focus:outline-none">
+                ☰
+            </button>
+
+        </div>
 
 
-        <script>
-    const menuBtn = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+        <!-- Mobil Menü -->
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('active');
-    });
-</script>
-<!-- Back to Top -->
-<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+            <div class="flex flex-col space-y-6 px-6 text-lg">
 
-<script>
-// Back to Top Butonu
-const backToTop = document.getElementById('back-to-top');
+                <a href="index.html"
+                    class="hover:text-purple-400">
+                    Ana Sayfa
+                </a>
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        backToTop.style.display = 'flex';
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-</script>
+                <a href="projects.html"
+                    class="hover:text-purple-400">
+                    Projeler
+                </a>
+
+                <a href="blog.html"
+                    class="hover:text-purple-400">
+                    Blog
+                </a>
+
+                <a href="about.html"
+                    class="text-purple-400">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html"
+                    class="hover:text-purple-400">
+                    İletişim
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ANA İÇERİK -->
+    <main class="max-w-5xl mx-auto px-6 py-20">
+
+
+        <!-- BAŞLIK -->
+        <section class="text-center mb-20">
+
+            <p class="text-purple-400 font-medium mb-4">
+                Ben Kimim?
+            </p>
+
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                Hakkımda
+            </h2>
+
+            <p class="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed">
+                Yazılım geliştirerek, projeler üreterek ve yeni teknolojiler öğrenerek
+                kendimi sürekli geliştirmeye çalışıyorum.
+            </p>
+
+        </section>
+
+
+
+        <!-- BENİM HAKKIMDA -->
+        <section class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10 mb-16">
+
+            <h3 class="text-3xl font-semibold mb-6 text-purple-400">
+                Merhaba, ben Furkan 👋
+            </h3>
+
+            <div class="space-y-6 text-zinc-300 text-lg leading-relaxed">
+
+                <p>
+                    Yalova Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.
+                    Yazılım geliştirme, oyun geliştirme ve web teknolojileriyle
+                    ilgileniyorum.
+                </p>
+
+                <p>
+                    Öğrendiğim teknolojileri yalnızca teoride bırakmak yerine,
+                    gerçek projeler geliştirerek uygulamaya çalışıyorum.
+                    Web uygulamaları, mobil uygulamalar ve Godot ile oyun projeleri
+                    geliştiriyorum.
+                </p>
+
+                <p>
+                    Aynı zamanda algoritmalar, veri yapıları, nesne yönelimli
+                    programlama, Git/GitHub ve yazılım geliştirme süreçleri
+                    konusunda kendimi geliştirmeye devam ediyorum.
+                </p>
+
+                <p>
+                    Amacım üniversite sürecinde güçlü bir proje portfolyosu
+                    oluşturmak, sektörde deneyim kazanmak ve mezun olduğumda
+                    iyi bir yazılım geliştirici olarak çalışabilecek seviyeye
+                    ulaşmak.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ŞU ANDA ÇALIŞTIĞIM ALANLAR -->
+        <section class="mb-20">
+
+            <h3 class="text-3xl font-semibold mb-10 text-purple-400">
+                Şu Anda Üzerinde Çalıştığım Alanlar
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
+                    <h4 class="text-xl font-semibold mb-2">
+                        💻 Yazılım Geliştirme
+                    </h4>
+                    <p class="text-zinc-400">
+                        Java, C, Python ve JavaScript ile programlama becerilerimi geliştiriyorum.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
+                    <h4 class="text-xl font-semibold mb-2">
+                        🎮 Oyun Geliştirme
+                    </h4>
+                    <p class="text-zinc-400">
+                        Godot ve GDScript kullanarak 2D oyun projeleri geliştiriyorum.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
+                    <h4 class="text-xl font-semibold mb-2">
+                        🌐 Web Geliştirme
+                    </h4>
+                    <p class="text-zinc-400">
+                        HTML, CSS, Tailwind CSS ve JavaScript ile responsive web projeleri geliştiriyorum.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
+                    <h4 class="text-xl font-semibold mb-2">
+                        🧠 Algoritmalar
+                    </h4>
+                    <p class="text-zinc-400">
+                        Veri yapıları, algoritmalar ve problem çözme becerilerimi geliştiriyorum.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TEKNOLOJİLER -->
+        <section class="mb-20">
+
+            <h3 class="text-3xl font-semibold mb-10 text-purple-400">
+                Teknolojiler ve Becerilerim
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Java
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        C
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Python
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        JavaScript
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        HTML / CSS
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Tailwind CSS
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Godot
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        GDScript
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Git
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        GitHub
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Android
+                    </p>
+                </div>
+
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
+                    <p class="text-xl font-medium">
+                        Kali Linux
+                    </p>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- YAKLAŞIMIM -->
+        <section class="mb-20">
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10">
+
+                <h3 class="text-3xl font-semibold mb-6 text-purple-400">
+                    Geliştirme Yaklaşımım
+                </h3>
+
+                <p class="text-zinc-300 text-lg leading-relaxed">
+                    Bir teknolojiyi öğrenirken yalnızca ders veya dokümantasyon
+                    takip etmek yerine öğrendiklerimi küçük projelerde kullanmaya
+                    çalışıyorum. Karşılaştığım problemlerin nedenlerini araştırarak
+                    ve çözerek ilerlemenin yazılım öğrenmenin en etkili yollarından
+                    biri olduğuna inanıyorum.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EĞİTİM -->
+        <section class="mb-20">
+
+            <h3 class="text-3xl font-semibold mb-10 text-purple-400">
+                Eğitim
+            </h3>
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+                <div class="flex flex-col md:flex-row gap-6">
+
+                    <div class="md:w-40 flex-shrink-0">
+                        <p class="text-purple-400 font-medium">
+                            Devam Ediyor
+                        </p>
+                    </div>
+
+                    <div>
+
+                        <h4 class="text-2xl font-semibold">
+                            Bilgisayar Mühendisliği
+                        </h4>
+
+                        <p class="text-zinc-400 mt-1">
+                            Yalova Üniversitesi
+                        </p>
+
+                        <p class="text-zinc-500 mt-4 leading-relaxed">
+                            Üniversite eğitimimin yanında yazılım geliştirme,
+                            algoritmalar, web teknolojileri ve oyun geliştirme
+                            alanlarında kişisel projeler geliştiriyorum.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HEDEF -->
+        <section>
+
+            <div class="border border-purple-500/30 bg-purple-500/5 rounded-3xl p-8 md:p-10">
+
+                <h3 class="text-3xl font-semibold mb-6 text-purple-400">
+                    Hedefim
+                </h3>
+
+                <p class="text-zinc-300 text-lg leading-relaxed">
+                    Üniversite boyunca yazılım bilgimi ve proje deneyimimi
+                    geliştirmek, gerçek dünya projelerinde görev almak ve
+                    profesyonel yazılım geliştirme süreçlerini öğrenmek istiyorum.
+                    Uzun vadede güçlü teknik bilgiye sahip bir yazılım geliştirici
+                    olmayı hedefliyorum.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <p class="text-zinc-300 text-lg mb-2">
+                Furkan Yalçın
+            </p>
+
+            <p class="text-zinc-500">
+                © 2026 • Bilgisayar Mühendisliği Öğrencisi
+            </p>
+
+            <p class="text-zinc-600 text-sm mt-4">
+                HTML • Tailwind CSS • JavaScript
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+    <button
+        id="back-to-top"
+        class="hidden fixed bottom-8 right-8 w-12 h-12 bg-purple-600 hover:bg-purple-700 rounded-full items-center justify-center text-xl shadow-lg transition">
+        ↑
+    </button>
+
+
+
+    <script>
+
+        // Mobil Menü
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Yukarı Çık Butonu
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 400) {
+
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+
+            } else {
+
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+
+            }
+
+        });
+
+
+        backToTop.addEventListener('click', () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        });
+
+    </script>
+
 
 </body>
 </html>
