@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Android Uygulamamı Google Play'e Hazırlama Sürecim | Furkan Yalçın</title>
+
+    <meta name="description"
+          content="Android uygulamamı Google Play'e hazırlarken AAB oluşturma, mağaza girişi ve kapalı test sürecinde öğrendiklerim.">
+
+    <meta name="author" content="Furkan Yalçın">
+    <meta name="robots" content="index, follow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon"
+          href="assets/images/favicon.png"
+          type="image/png">
+</head>
+
+
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+
+
+    <!-- NAVIGATION -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <a href="index.html"
+               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+
+                Karanlık<span class="text-purple-500">Yol</span>
+
+            </a>
+
+
+            <div class="hidden md:flex items-center space-x-8 text-lg">
+
+                <a href="index.html" class="hover:text-purple-400 transition">
+                    Ana Sayfa
+                </a>
+
+                <a href="projects.html" class="hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="blog.html" class="text-purple-400 font-medium">
+                    Blog
+                </a>
+
+                <a href="about.html" class="hover:text-purple-400 transition">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html" class="hover:text-purple-400 transition">
+                    İletişim
+                </a>
+
+            </div>
+
+
+            <button id="menu-button"
+                    class="md:hidden text-3xl focus:outline-none">
+                ☰
+            </button>
+
+        </div>
+
+
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+
+            <div class="flex flex-col space-y-6 px-6 text-lg">
+
+                <a href="index.html">Ana Sayfa</a>
+                <a href="projects.html">Projeler</a>
+                <a href="blog.html" class="text-purple-400">Blog</a>
+                <a href="about.html">Hakkımda</a>
+                <a href="contact.html">İletişim</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- YAZI -->
+    <main class="max-w-4xl mx-auto px-6 py-20">
+
+
+        <!-- ÜST BİLGİ -->
+        <header class="mb-14">
+
+            <a href="blog.html"
+               class="text-purple-400 hover:text-purple-300 font-medium">
+
+                ← Blog'a Dön
+
+            </a>
+
+
+            <p class="text-purple-400 text-sm font-medium mt-10 mb-4">
+                ANDROID • GOOGLE PLAY
+            </p>
+
+
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-7">
+
+                Android Uygulamamı Google Play'e Hazırlama Sürecim
+
+            </h1>
+
+
+            <p class="text-xl text-zinc-400 leading-relaxed">
+
+                Bir mobil uygulamayı geliştirmek işin yalnızca bir kısmı.
+                Uygulamayı mağazada yayınlamaya hazırlarken paketleme,
+                test, mağaza bilgileri ve yayınlama süreçleriyle ilgili
+                birçok yeni şey öğrendim.
+
+            </p>
+
+
+            <div class="flex flex-wrap items-center gap-3 mt-8 text-sm text-zinc-500">
+
+                <span>Furkan Yalçın</span>
+
+                <span>•</span>
+
+                <span>Ağustos 2026</span>
+
+                <span>•</span>
+
+                <span>5 dk okuma</span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- AYRAÇ -->
+        <div class="h-px bg-zinc-800 mb-14"></div>
+
+
+
+        <!-- İÇERİK -->
+        <article class="space-y-12 text-zinc-300 text-lg leading-relaxed">
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Projenin Başlangıcı
+                </h2>
+
+                <p>
+                    Mobil uygulama geliştirme sürecinde yalnızca çalışan bir
+                    uygulama ortaya çıkarmanın yeterli olmadığını fark ettim.
+                    Uygulamanın gerçek bir Android cihazda düzgün çalışması,
+                    doğru şekilde paketlenmesi ve mağaza gereksinimlerine
+                    uygun hale getirilmesi de geliştirme sürecinin önemli
+                    parçalarından biri.
+                </p>
+
+            </section>
+
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Android App Bundle Oluşturmak
+                </h2>
+
+                <p>
+                    Google Play'e yükleme aşamasına geldiğimde APK yerine
+                    yayınlama için Android App Bundle formatıyla çalışmam
+                    gerekti. Bu süreçte release sürümü oluşturma, uygulamayı
+                    imzalama ve paket bilgilerinin doğru olduğundan emin olma
+                    gibi konularla karşılaştım.
+                </p>
+
+                <p class="mt-5">
+                    İlk başta yalnızca uygulamanın çalışmasına odaklanırken,
+                    yayınlama aşamasında sürüm kodu, sürüm adı, paket adı ve
+                    imzalama gibi ayrıntıların ne kadar önemli olduğunu
+                    görmüş oldum.
+                </p>
+
+            </section>
+
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Mağaza Sayfasını Hazırlamak
+                </h2>
+
+                <p>
+                    Bir diğer önemli bölüm Google Play mağaza girişiydi.
+                    Uygulama simgesi, açıklamalar, ekran görüntüleri,
+                    gizlilik politikası ve geliştirici bilgileri gibi
+                    birçok alanın hazırlanması gerekiyordu.
+                </p>
+
+                <p class="mt-5">
+                    Bu süreç bana bir uygulamanın yalnızca koddan ibaret
+                    olmadığını gösterdi. Kullanıcının mağazada gördüğü
+                    açıklama, görseller ve uygulama sunumu da ürünün bir
+                    parçası.
+                </p>
+
+            </section>
+
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Kapalı Test Süreci
+                </h2>
+
+                <p>
+                    Uygulamayı doğrudan herkese açmak yerine önce kapalı
+                    test sürecine aldım. Test kullanıcılarının uygulamayı
+                    gerçek cihazlarında deneyebilmesi sayesinde yayın
+                    öncesinde ortaya çıkabilecek hataları görmek mümkün
+                    oluyor.
+                </p>
+
+                <p class="mt-5">
+                    Bu aşama bana test sürecinin geliştirme kadar önemli
+                    olduğunu öğretti. Geliştirici olarak kendi cihazımda
+                    görmediğim bir sorun başka bir cihazda ortaya çıkabilir.
+                </p>
+
+            </section>
+
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Bu Süreçte Neler Öğrendim?
+                </h2>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-7">
+
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-zinc-100 mb-2">
+                            Android Yayınlama
+                        </h3>
+
+                        <p class="text-zinc-400 text-base">
+                            APK ve AAB arasındaki farkları ve release
+                            paket oluşturma sürecini daha iyi anladım.
+                        </p>
+                    </div>
+
+
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-zinc-100 mb-2">
+                            Test Süreci
+                        </h3>
+
+                        <p class="text-zinc-400 text-base">
+                            Gerçek kullanıcıların uygulamayı test etmesinin
+                            neden önemli olduğunu deneyimledim.
+                        </p>
+                    </div>
+
+
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-zinc-100 mb-2">
+                            Ürün Sunumu
+                        </h3>
+
+                        <p class="text-zinc-400 text-base">
+                            Ekran görüntüsü, açıklama ve mağaza tasarımının
+                            uygulamanın önemli parçaları olduğunu öğrendim.
+                        </p>
+                    </div>
+
+
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-zinc-100 mb-2">
+                            Problem Çözme
+                        </h3>
+
+                        <p class="text-zinc-400 text-base">
+                            Yayınlama sırasında karşılaştığım teknik
+                            problemlerin nedenlerini araştırarak çözmeye
+                            çalıştım.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section>
+
+                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                    Sonuç
+                </h2>
+
+                <p>
+                    Bu proje sayesinde mobil uygulama geliştirme sürecinin
+                    kod yazmaktan çok daha geniş olduğunu gördüm.
+                    Geliştirme, test, paketleme, mağaza hazırlığı ve yayınlama
+                    birbirini tamamlayan aşamalar.
+                </p>
+
+                <p class="mt-5">
+                    Bundan sonraki projelerimde uygulamanın yayınlama ve
+                    kullanıcı deneyimi tarafını geliştirme sürecinin en
+                    başından itibaren düşünmeye çalışacağım.
+                </p>
+
+            </section>
+
+        </article>
+
+
+
+        <!-- ALT CTA -->
+        <div class="mt-20 border border-purple-500/20
+                    bg-purple-500/5 rounded-3xl p-8 md:p-10">
+
+            <p class="text-purple-400 font-medium mb-3">
+                PROJELER
+            </p>
+
+            <h2 class="text-3xl font-semibold mb-4">
+                Geliştirdiğim diğer projeleri incele.
+            </h2>
+
+            <p class="text-zinc-400 mb-7">
+                Oyun, mobil uygulama ve web çalışmalarımı projeler sayfasında görebilirsin.
+            </p>
+
+            <a href="projects.html"
+               class="inline-flex bg-purple-600 hover:bg-purple-700
+                      px-7 py-4 rounded-2xl font-semibold">
+
+                Projelerimi Gör →
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <p class="text-zinc-300 font-medium">
+                Furkan Yalçın
+            </p>
+
+            <p class="text-zinc-600 text-sm mt-2">
+                © 2026 Furkan Yalçın
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+    </script>
+
+
+</body>
+</html>
