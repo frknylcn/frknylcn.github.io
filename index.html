@@ -1,133 +1,830 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FURKAN YALÇIN</title>
-        <meta name="description" content="Furkan Yalçın - Bilgisayar Mühendisliği öğrencisi. Web geliştirme, oyun tasarımı ve yazılım projelerimi sergilediğim kişisel portfolio sitem.">
-    <meta name="keywords" content="Furkan Yalçın, bilgisayar mühendisi,Teknoloji,Blog, My Blog, web geliştirme, portfolio, frontend, javascript, oyun geliştirme,bilgisayar,furkan, yalçın furkan,mühendis">
+
+    <title>Furkan Yalçın | Software & Game Developer</title>
+
+    <meta name="description"
+        content="Furkan Yalçın - Bilgisayar Mühendisliği öğrencisi. Yazılım geliştirme, oyun geliştirme, mobil uygulamalar ve web projeleri.">
+
+    <meta name="keywords"
+        content="Furkan Yalçın, bilgisayar mühendisliği, yazılım geliştirici, oyun geliştirme, Godot, Java, JavaScript, web geliştirme, portfolio">
+
     <meta name="author" content="Furkan Yalçın">
-    
-    <!-- Open Graph (Sosyal medyada güzel görünmesi için) -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Furkan Yalçın - Portfolio">
-    <meta property="og:description" content="Bilgisayar Mühendisliği öğrencisi ve geliştirici">
+    <meta property="og:description"
+        content="Bilgisayar Mühendisliği öğrencisi. Yazılım, mobil uygulama ve oyun projelerimi keşfedin.">
     <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="css/style.css">
-            <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <h1 class="text-3xl font-bold tracking-tight">KaranlıkYol</h1>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 text-lg">
-            <a href="index.html" class="hover:text-purple-400 transition">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400 transition">Projeler</a>
-            <a href="blog.html" class="hover:text-purple-400 transition">Blog</a>
-            <a href="about.html" class="hover:text-purple-400 transition">Hakkımda</a>
-            <a href="contact.html" class="hover:text-purple-400 transition">İletişim</a>
+
+
+<body class="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-purple-600 selection:text-white">
+
+
+    <!-- ========================= -->
+    <!-- NAVIGATION -->
+    <!-- ========================= -->
+
+    <nav class="border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <a href="index.html"
+                class="text-2xl md:text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+                Karanlık<span class="text-purple-500">Yol</span>
+            </a>
+
+
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex items-center space-x-8 text-base">
+
+                <a href="index.html"
+                    class="text-purple-400 font-medium">
+                    Ana Sayfa
+                </a>
+
+                <a href="projects.html"
+                    class="text-zinc-300 hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="blog.html"
+                    class="text-zinc-300 hover:text-purple-400 transition">
+                    Blog
+                </a>
+
+                <a href="about.html"
+                    class="text-zinc-300 hover:text-purple-400 transition">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html"
+                    class="bg-purple-600 hover:bg-purple-700 px-5 py-3 rounded-xl font-medium transition">
+                    İletişim
+                </a>
+
+            </div>
+
+
+            <!-- Mobil Hamburger -->
+            <button
+                id="menu-button"
+                class="md:hidden text-3xl focus:outline-none"
+                aria-label="Menüyü aç">
+                ☰
+            </button>
+
         </div>
 
-        <!-- Mobil Hamburger -->
-        <button id="menu-button" class="md:hidden text-4xl focus:outline-none">☰</button>
-    </div>
 
-    <!-- Mobil Menü -->
-    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
-        <div class="flex flex-col space-y-6 px-6 text-lg">
-            <a href="index.html" class="hover:text-purple-400">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400">Projeler</a>
-            <a href="blog.html" class="hover:text-purple-400">Blog</a>
-            <a href="about.html" class="hover:text-purple-400">Hakkımda</a>
-            <a href="contact.html" class="hover:text-purple-400">İletişim</a>
+        <!-- Mobil Menü -->
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+
+            <div class="flex flex-col space-y-6 px-6 text-lg">
+
+                <a href="index.html" class="text-purple-400">
+                    Ana Sayfa
+                </a>
+
+                <a href="projects.html" class="hover:text-purple-400">
+                    Projeler
+                </a>
+
+                <a href="blog.html" class="hover:text-purple-400">
+                    Blog
+                </a>
+
+                <a href="about.html" class="hover:text-purple-400">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html" class="hover:text-purple-400">
+                    İletişim
+                </a>
+
+            </div>
+
         </div>
-    </div>
-</nav>
 
-    <!-- Hero Section - Premium Versiyon -->
-    <section class="min-h-screen flex items-center relative hero-gradient overflow-hidden">
-        <!-- Arka plan efekti -->
-        <div class="absolute inset-0 bg-[radial-gradient(at_center,#6b21a8_0%,transparent_60%)] opacity-20"></div>
-        
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl px-6 py-3 mb-10">
-                    <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span class="text-sm font-medium tracking-wider">BİLGİSAYAR MÜHENDİSİ</span>
+    </nav>
+
+
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <main>
+
+        <section class="relative min-h-[88vh] flex items-center overflow-hidden">
+
+            <!-- Dekoratif arka plan -->
+            <div class="absolute inset-0 pointer-events-none">
+
+                <div class="absolute top-20 left-1/4 w-96 h-96 bg-purple-700/20 rounded-full blur-[120px]"></div>
+
+                <div class="absolute bottom-20 right-1/4 w-80 h-80 bg-fuchsia-700/10 rounded-full blur-[120px]"></div>
+
+            </div>
+
+
+            <div class="max-w-6xl mx-auto px-6 py-24 relative z-10 w-full">
+
+                <div class="max-w-4xl">
+
+
+                    <!-- Küçük badge -->
+                    <div class="inline-flex items-center gap-3 bg-zinc-900/80 border border-zinc-800 rounded-full px-5 py-3 mb-8">
+
+                        <span class="relative flex h-3 w-3">
+
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+
+                        </span>
+
+                        <span class="text-sm text-zinc-300 tracking-wide">
+                            BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ
+                        </span>
+
+                    </div>
+
+
+                    <h1 class="text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8">
+
+                        Furkan
+
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-fuchsia-500">
+                            Yalçın
+                        </span>
+
+                    </h1>
+
+
+                    <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl leading-relaxed mb-5">
+
+                        Yazılım geliştiriyor, mobil uygulamalar ve oyun projeleri üretiyorum.
+
+                    </p>
+
+
+                    <p class="text-lg text-zinc-500 max-w-2xl leading-relaxed mb-10">
+
+                        Godot, Java, JavaScript ve modern web teknolojilerini kullanarak
+                        fikirleri çalışan projelere dönüştürmeye odaklanıyorum.
+
+                    </p>
+
+
+                    <!-- Butonlar -->
+                    <div class="flex flex-wrap gap-4">
+
+                        <a
+                            href="projects.html"
+                            class="group bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-2xl text-lg font-semibold transition flex items-center gap-3">
+
+                            Projelerimi İncele
+
+                            <span class="group-hover:translate-x-1 transition">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="contact.html"
+                            class="border border-zinc-700 hover:border-purple-500 bg-zinc-900/40 hover:bg-zinc-900 px-8 py-4 rounded-2xl text-lg font-medium transition">
+
+                            Benimle İletişime Geç
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/frknylcn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="border border-zinc-800 hover:border-zinc-600 px-8 py-4 rounded-2xl text-lg text-zinc-300 transition">
+
+                            GitHub ↗
+
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <h1 class="text-6xl md:text-7xl font-bold leading-[1.05] mb-6">
-                    Furkan <span class="gradient-text">Yalçın</span>
-                </h1>
-                
-                <p class="text-2xl md:text-3xl text-zinc-400 mb-12 max-w-2xl">
-                    Web ve oyun geliştirme tutkunu.<br>
-                    Kod yazarak geleceği şekillendiriyorum.
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- KISA BİLGİLER -->
+        <!-- ========================= -->
+
+        <section class="border-y border-zinc-800 bg-zinc-900/30">
+
+            <div class="max-w-6xl mx-auto px-6 py-10">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+
+                    <div>
+                        <p class="text-3xl font-bold text-purple-400">
+                            4+
+                        </p>
+
+                        <p class="text-zinc-500 mt-2">
+                            Gerçek Proje
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="text-3xl font-bold text-purple-400">
+                            Godot
+                        </p>
+
+                        <p class="text-zinc-500 mt-2">
+                            Oyun Geliştirme
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="text-3xl font-bold text-purple-400">
+                            Android
+                        </p>
+
+                        <p class="text-zinc-500 mt-2">
+                            Mobil Uygulama
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="text-3xl font-bold text-purple-400">
+                            GitHub
+                        </p>
+
+                        <p class="text-zinc-500 mt-2">
+                            Versiyon Kontrol
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- NELER YAPIYORUM -->
+        <!-- ========================= -->
+
+        <section class="max-w-6xl mx-auto px-6 py-28">
+
+            <div class="mb-14">
+
+                <p class="text-purple-400 font-medium mb-3">
+                    ÇALIŞMA ALANLARIM
                 </p>
 
-                <div class="flex flex-wrap gap-5">
-                    <a href="projects.html" 
-                       class="group bg-white text-black hover:bg-purple-600 hover:text-white px-10 py-6 rounded-3xl text-lg font-semibold transition-all duration-300 flex items-center gap-3">
-                        Projelerimi İncele
-                        <span class="group-hover:translate-x-2 transition">→</span>
-                    </a> 
-                    
-                    <a href="about.html" 
-                       class="border border-white/30 hover:border-white/70 px-10 py-6 rounded-3xl text-lg font-medium transition-all">
-                        Beni Tanı
-                    </a>
+                <h2 class="text-4xl md:text-5xl font-bold">
+                    Neler Yapıyorum?
+                </h2>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                <div
+                    class="group bg-zinc-900 border border-zinc-800 hover:border-purple-500 rounded-3xl p-8 transition duration-300 hover:-translate-y-1">
+
+                    <div class="text-4xl mb-6">
+                        💻
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Yazılım Geliştirme
+                    </h3>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Java, C, Python ve JavaScript kullanarak programlama,
+                        algoritma ve yazılım geliştirme becerilerimi geliştiriyorum.
+                    </p>
+
                 </div>
+
+
+                <div
+                    class="group bg-zinc-900 border border-zinc-800 hover:border-purple-500 rounded-3xl p-8 transition duration-300 hover:-translate-y-1">
+
+                    <div class="text-4xl mb-6">
+                        🎮
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Oyun Geliştirme
+                    </h3>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Godot ve GDScript kullanarak oynanış sistemleri,
+                        kullanıcı arayüzleri ve mobil oyun projeleri geliştiriyorum.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="group bg-zinc-900 border border-zinc-800 hover:border-purple-500 rounded-3xl p-8 transition duration-300 hover:-translate-y-1">
+
+                    <div class="text-4xl mb-6">
+                        🌐
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Web & Mobil
+                    </h3>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Responsive web siteleri ve JavaScript tabanlı mobil
+                        uygulamalar geliştirerek fikirleri gerçek ürünlere dönüştürüyorum.
+                    </p>
+
+                </div>
+
             </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- ÖNE ÇIKAN PROJELER -->
+        <!-- ========================= -->
+
+        <section class="bg-zinc-900/30 border-y border-zinc-800">
+
+            <div class="max-w-6xl mx-auto px-6 py-28">
+
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+
+                    <div>
+
+                        <p class="text-purple-400 font-medium mb-3">
+                            ÇALIŞMALARIM
+                        </p>
+
+                        <h2 class="text-4xl md:text-5xl font-bold">
+                            Öne Çıkan Projeler
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="projects.html"
+                        class="text-purple-400 hover:text-purple-300 font-medium">
+
+                        Tüm projeleri gör →
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+
+
+                    <!-- Karanlık Madenci -->
+                    <article
+                        class="bg-zinc-950 border border-zinc-800 hover:border-purple-500 rounded-3xl overflow-hidden transition duration-300 group">
+
+                        <div class="h-56 bg-zinc-900 overflow-hidden">
+
+                            <img
+                                src="images/projects/karanlik-madenci.jpg"
+                                alt="Karanlık Madenci"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <span
+                                class="text-xs border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">
+
+                                GELİŞTİRİLİYOR
+
+                            </span>
+
+
+                            <h3 class="text-2xl font-semibold mt-5 mb-3">
+                                Karanlık Madenci
+                            </h3>
+
+
+                            <p class="text-zinc-400 leading-relaxed mb-5">
+                                Godot ile geliştirdiğim 2D madencilik ve keşif oyunu.
+                            </p>
+
+
+                            <p class="text-sm text-purple-400">
+                                Godot • GDScript • Android
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Dolapta Ne Var -->
+                    <article
+                        class="bg-zinc-950 border border-zinc-800 hover:border-purple-500 rounded-3xl overflow-hidden transition duration-300 group">
+
+                        <div class="h-56 bg-zinc-900 overflow-hidden">
+
+                            <img
+                                src="images/projects/dolapta-ne-var.jpeg"
+                                alt="Dolapta Ne Var?"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <span
+                                class="text-xs border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">
+
+                                ANDROID
+
+                            </span>
+
+
+                            <h3 class="text-2xl font-semibold mt-5 mb-3">
+                                Dolapta Ne Var?
+                            </h3>
+
+
+                            <p class="text-zinc-400 leading-relaxed mb-5">
+                                Malzemelere göre yemek önerileri sunan mobil tarif uygulaması.
+                            </p>
+
+
+                            <p class="text-sm text-purple-400">
+                                JavaScript • Capacitor • Android
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Haspet Defense -->
+                    <article
+                        class="bg-zinc-950 border border-zinc-800 hover:border-purple-500 rounded-3xl overflow-hidden transition duration-300 group">
+
+                        <div class="h-56 bg-zinc-900 overflow-hidden">
+
+                            <img
+                                src="images/projects/haspet-defense.jpg"
+                                alt="Haspet Defense"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <span
+                                class="text-xs border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full">
+
+                                OYUN
+
+                            </span>
+
+
+                            <h3 class="text-2xl font-semibold mt-5 mb-3">
+                                Haspet Defense
+                            </h3>
+
+
+                            <p class="text-zinc-400 leading-relaxed mb-5">
+                                Asker üretme ve kale savunma mekaniklerine sahip 2D strateji oyunu.
+                            </p>
+
+
+                            <p class="text-sm text-purple-400">
+                                Godot • GDScript
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="text-center mt-12">
+
+                    <a
+                        href="projects.html"
+                        class="inline-flex items-center gap-2 border border-zinc-700 hover:border-purple-500 px-7 py-4 rounded-2xl transition">
+
+                        Projelerin tamamını incele →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- TEKNOLOJİLER -->
+        <!-- ========================= -->
+
+        <section class="max-w-6xl mx-auto px-6 py-28">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+
+                <p class="text-purple-400 font-medium mb-3">
+                    TEKNOLOJİLER
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-bold mb-5">
+                    Kullandığım Araçlar
+                </h2>
+
+                <p class="text-zinc-400 text-lg">
+                    Projelerimde kullandığım ve üzerinde çalışmaya devam ettiğim teknolojiler.
+                </p>
+
+            </div>
+
+
+            <div class="flex flex-wrap justify-center gap-3">
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Java
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    C
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Python
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    JavaScript
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    HTML
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    CSS
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Tailwind CSS
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Godot
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    GDScript
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Git
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    GitHub
+                </span>
+
+                <span class="bg-zinc-900 border border-zinc-800 px-5 py-3 rounded-xl">
+                    Android
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- CTA -->
+        <!-- ========================= -->
+
+        <section class="max-w-6xl mx-auto px-6 pb-28">
+
+            <div
+                class="relative overflow-hidden border border-purple-500/30 bg-gradient-to-br from-purple-950/40 to-zinc-900 rounded-[2rem] p-10 md:p-16 text-center">
+
+                <div
+                    class="absolute -top-24 -right-24 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl">
+                </div>
+
+
+                <div class="relative z-10 max-w-3xl mx-auto">
+
+                    <p class="text-purple-400 font-medium mb-4">
+                        İLETİŞİM
+                    </p>
+
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        Birlikte bir şeyler geliştirebiliriz.
+                    </h2>
+
+                    <p class="text-zinc-400 text-lg mb-9 leading-relaxed">
+                        Projelerim hakkında konuşmak, fikir paylaşmak veya benimle
+                        iletişime geçmek için mesaj gönderebilirsin.
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="inline-flex bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-2xl font-semibold transition">
+
+                        İletişime Geç →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+
+
+            <div>
+
+                <p class="text-lg font-semibold">
+                    Furkan Yalçın
+                </p>
+
+                <p class="text-zinc-500 text-sm mt-1">
+                    Bilgisayar Mühendisliği Öğrencisi
+                </p>
+
+            </div>
+
+
+            <div class="flex items-center gap-6 text-zinc-400">
+
+                <a
+                    href="https://github.com/frknylcn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-purple-400 transition">
+
+                    GitHub
+
+                </a>
+
+                <a
+                    href="projects.html"
+                    class="hover:text-purple-400 transition">
+
+                    Projeler
+
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="hover:text-purple-400 transition">
+
+                    İletişim
+
+                </a>
+
+            </div>
+
+
+            <p class="text-zinc-600 text-sm">
+                © 2026 Furkan Yalçın
+            </p>
+
         </div>
 
-        <!-- Scroll Indicator - Daha da aşağı -->
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10 pt-16">
-            <span class="text-xs tracking-[3px] text-zinc-500 font-medium">SCROLL TO EXPLORE</span>
-            <div class="w-6 h-10 border-2 border-zinc-400 rounded-full flex items-start justify-center p-1">
-                <div class="w-1 h-2 bg-zinc-400 rounded-full animate-scroll"></div>
-            </div>
-        </div>
-    </section>
+    </footer>
 
-    <!-- Footer -->
-<footer class="border-t border-zinc-800 bg-zinc-950 py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-zinc-400 text-lg mb-3">Furkan Yalçın</p>
-        <p class="text-zinc-500">© 2026 • Bilgisayar Mühendisi</p>
-        <p class="text-zinc-600 text-sm mt-8">HTML • Tailwind CSS • JavaScript ile geliştirildi</p>
-    </div>
-</footer>
+
+
+    <!-- BACK TO TOP -->
+    <button
+        id="back-to-top"
+        class="hidden fixed bottom-7 right-7 w-12 h-12 bg-purple-600 hover:bg-purple-700 rounded-full items-center justify-center text-xl shadow-xl z-50 transition"
+        aria-label="Sayfanın başına dön">
+
+        ↑
+
+    </button>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
     <script>
-    const menuBtn = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('active');
-    });
-</script>
-<!-- Back to Top -->
-<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+        // Mobil Menü
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-// Back to Top Butonu
-const backToTop = document.getElementById('back-to-top');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        backToTop.style.display = 'flex';
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-</script>
+
+        // Yukarı Çık Butonu
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+
+            } else {
+
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+
+            }
+
+        });
+
+
+        backToTop.addEventListener('click', () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        });
+
+    </script>
 
 
 </body>
+
 </html>
