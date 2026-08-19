@@ -128,6 +128,13 @@ const blogPosts = [
         summary: "Godot ile geliştirdiğim 2D madencilik oyununda TileMap, envanter, dinamit, mobil kontroller ve hata ayıklama süreçlerinde öğrendiklerimi anlatıyorum.",
         link: "blog-karanlik-madenci.html",
         category: "Godot • GDScript"
+    },
+    {
+    title: "Kendi Portfolio Sitemi Geliştirirken Neler Öğrendim?",
+    date: "19 Ağustos 2026",
+    summary: "HTML, Tailwind CSS, JavaScript, GitHub Pages, Formspree, SEO ve Google Search Console kullanarak portfolio sitemi geliştirirken öğrendiklerimi anlatıyorum.",
+    link: "blog-portfolio.html",
+    category: "Web • GitHub • SEO"
     }
 ];
 
