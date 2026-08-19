@@ -1,144 +1,425 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Blog | Furkan Yalçın</title>
 
-<meta name="description"
-      content="Yazılım geliştirme, oyun geliştirme ve teknoloji üzerine öğrendiklerimi ve deneyimlerimi paylaştığım blog.">
-    <meta name="keywords" content="Furkan Yalçın, bilgisayar mühendisi,Teknoloji,Blog, My Blog, web geliştirme, portfolio, frontend, javascript, oyun geliştirme,bilgisayar,furkan, yalçın furkan,mühendis">
+    <meta name="description"
+          content="Yazılım geliştirme, oyun geliştirme, Android uygulamaları ve öğrendiğim teknolojiler hakkında deneyimlerimi paylaştığım kişisel blog.">
+
     <meta name="author" content="Furkan Yalçın">
-    
-    <!-- Open Graph (Sosyal medyada güzel görünmesi için) -->
-    <meta property="og:title" content="Furkan Yalçın - Portfolio">
-    <meta property="og:description" content="Bilgisayar Mühendisliği 1. sınıf öğrencisi ve geliştirici">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://frknylcn.github.io/portfolio/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Blog | Furkan Yalçın">
+
+    <meta property="og:description"
+          content="Yazılım, oyun geliştirme ve teknoloji üzerine öğrendiklerimi ve proje deneyimlerimi paylaşıyorum.">
+
     <meta property="og:type" content="website">
+
+    <meta property="og:url"
+          content="https://frknylcn.github.io/portfolio/blog.html">
+
+    <meta property="og:image"
+          content="https://frknylcn.github.io/portfolio/images/projects/portfolio.jpeg">
+
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Blog | Furkan Yalçın">
+
+    <meta name="twitter:description"
+          content="Yazılım, oyun geliştirme ve proje deneyimlerim üzerine yazılar.">
+
+    <meta name="twitter:image"
+          content="https://frknylcn.github.io/portfolio/images/projects/portfolio.jpeg">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-            <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+    <!-- Favicon -->
+    <link rel="icon"
+          href="assets/images/favicon.png"
+          type="image/png">
+
+    <link rel="apple-touch-icon"
+          href="assets/images/favicon.png">
 </head>
+
+
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <a href="index.html"
-   class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
-    Karanlık<span class="text-purple-500">Yol</span>
-</a>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 text-lg">
-            <a href="index.html" class="hover:text-purple-400 transition">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400 transition">Projeler</a>
-            <a href="blog.html" class="text-purple-400 font-medium">Blog</a>
-            <a href="about.html" class="hover:text-purple-400 transition">Hakkımda</a>
-            <a href="contact.html" class="hover:text-purple-400 transition">İletişim</a>
+
+
+    <!-- NAVIGATION -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <a href="index.html"
+               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+
+                Karanlık<span class="text-purple-500">Yol</span>
+
+            </a>
+
+
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex items-center space-x-8 text-lg">
+
+                <a href="index.html"
+                   class="hover:text-purple-400 transition">
+                    Ana Sayfa
+                </a>
+
+                <a href="projects.html"
+                   class="hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="blog.html"
+                   class="text-purple-400 font-medium">
+                    Blog
+                </a>
+
+                <a href="about.html"
+                   class="hover:text-purple-400 transition">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html"
+                   class="hover:text-purple-400 transition">
+                    İletişim
+                </a>
+
+            </div>
+
+
+            <!-- Mobil Menü Butonu -->
+            <button id="menu-button"
+                    class="md:hidden text-3xl focus:outline-none"
+                    aria-label="Menüyü aç">
+                ☰
+            </button>
+
         </div>
 
-        <!-- Mobil Hamburger -->
-        <button id="menu-button" class="md:hidden text-4xl focus:outline-none">☰</button>
-    </div>
 
-    <!-- Mobil Menü -->
-    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
-        <div class="flex flex-col space-y-6 px-6 text-lg">
-            <a href="index.html" class="hover:text-purple-400">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400">Projeler</a>
-            <a href="blog.html" class="hover:text-purple-400">Blog</a>
-            <a href="about.html" class="hover:text-purple-400">Hakkımda</a>
-            <a href="contact.html" class="hover:text-purple-400">İletişim</a>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+
+            <div class="flex flex-col space-y-6 px-6 text-lg">
+
+                <a href="index.html"
+                   class="hover:text-purple-400">
+                    Ana Sayfa
+                </a>
+
+                <a href="projects.html"
+                   class="hover:text-purple-400">
+                    Projeler
+                </a>
+
+                <a href="blog.html"
+                   class="text-purple-400 font-medium">
+                    Blog
+                </a>
+
+                <a href="about.html"
+                   class="hover:text-purple-400">
+                    Hakkımda
+                </a>
+
+                <a href="contact.html"
+                   class="hover:text-purple-400">
+                    İletişim
+                </a>
+
+            </div>
+
         </div>
-    </div>
-</nav>
 
-    <div class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-5xl font-bold mb-4">My Blog</h2>
-        <p class="text-zinc-400 text-xl mb-12">Yazılarım, öğrendiklerim ve deneyimlerim</p>
+    </nav>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blog-container">
-            <!-- Blog yazıları buraya gelecek -->
+
+
+    <main>
+
+
+        <!-- BLOG HERO -->
+        <section class="relative overflow-hidden">
+
+            <!-- Arka plan ışığı -->
+            <div class="absolute inset-0 pointer-events-none">
+
+                <div class="absolute top-0 left-1/3
+                            w-96 h-96
+                            bg-purple-700/15
+                            rounded-full
+                            blur-[130px]">
+                </div>
+
+            </div>
+
+
+            <div class="max-w-6xl mx-auto px-6 pt-20 pb-16 relative z-10">
+
+                <div class="max-w-3xl">
+
+                    <p class="text-purple-400 font-medium tracking-wider mb-4">
+                        BLOG
+                    </p>
+
+
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Yazılarım
+                    </h1>
+
+
+                    <p class="text-zinc-400 text-xl leading-relaxed">
+
+                        Yazılım geliştirirken, oyun ve mobil uygulamalar üretirken
+                        öğrendiklerimi ve karşılaştığım problemleri burada paylaşıyorum.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BLOG KARTLARI -->
+        <section class="max-w-6xl mx-auto px-6 pb-24 reveal">
+
+            <div class="flex items-center justify-between gap-6 mb-10">
+
+                <div>
+
+                    <h2 class="text-3xl font-semibold">
+                        Son Yazılar
+                    </h2>
+
+                    <p class="text-zinc-500 mt-2">
+                        Projelerimden ve öğrenme sürecimden notlar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8"
+                 id="blog-container">
+
+                <!-- main.js tarafından eklenecek -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BLOG CTA -->
+        <section class="max-w-6xl mx-auto px-6 pb-24 reveal">
+
+            <div class="border border-purple-500/20
+                        bg-gradient-to-br
+                        from-purple-950/30
+                        to-zinc-900
+                        rounded-3xl
+                        p-10 md:p-14
+                        flex flex-col md:flex-row
+                        justify-between
+                        items-start md:items-center
+                        gap-8">
+
+                <div class="max-w-2xl">
+
+                    <p class="text-purple-400 font-medium mb-3">
+                        PROJELER
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Yazıların arkasındaki projeleri incele.
+                    </h2>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Oyun, mobil uygulama ve web projelerimde kullandığım
+                        teknolojileri ve geliştirme süreçlerini görebilirsin.
+                    </p>
+
+                </div>
+
+
+                <a href="projects.html"
+                   class="flex-shrink-0
+                          bg-purple-600
+                          hover:bg-purple-700
+                          px-7 py-4
+                          rounded-2xl
+                          font-semibold
+                          transition">
+
+                    Projelere Git →
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+
+        <div class="max-w-6xl mx-auto px-6
+                    flex flex-col md:flex-row
+                    justify-between items-center gap-6">
+
+            <div>
+
+                <p class="text-lg font-semibold">
+                    Furkan Yalçın
+                </p>
+
+                <p class="text-zinc-500 text-sm mt-1">
+                    Bilgisayar Mühendisliği Öğrencisi
+                </p>
+
+            </div>
+
+
+            <div class="flex items-center gap-6 text-zinc-400">
+
+                <a href="https://github.com/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 transition">
+                    GitHub
+                </a>
+
+                <a href="projects.html"
+                   class="hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="contact.html"
+                   class="hover:text-purple-400 transition">
+                    İletişim
+                </a>
+
+            </div>
+
+
+            <p class="text-zinc-600 text-sm">
+                © 2026 Furkan Yalçın
+            </p>
+
         </div>
-    </div>
 
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top"
+            aria-label="Sayfanın başına dön">
+        ↑
+    </button>
+
+
+
+    <!-- Blog kartları -->
     <script src="js/main.js"></script>
 
-        <!-- Footer -->
-<footer class="border-t border-zinc-800 bg-zinc-950 py-12">
 
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-
-        <div>
-            <p class="text-lg font-semibold">
-                Furkan Yalçın
-            </p>
-
-            <p class="text-zinc-500 text-sm mt-1">
-                Bilgisayar Mühendisliği Öğrencisi
-            </p>
-        </div>
-
-
-        <div class="flex items-center gap-6 text-zinc-400">
-
-            <a
-                href="https://github.com/frknylcn"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-purple-400 transition">
-                GitHub
-            </a>
-
-            <a
-                href="projects.html"
-                class="hover:text-purple-400 transition">
-                Projeler
-            </a>
-
-            <a
-                href="contact.html"
-                class="hover:text-purple-400 transition">
-                İletişim
-            </a>
-
-        </div>
-
-
-        <p class="text-zinc-600 text-sm">
-            © 2026 Furkan Yalçın
-        </p>
-
-    </div>
-
-</footer>
     <script>
-    const menuBtn = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('active');
-    });
-</script>
-<!-- Back to Top -->
-<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+        // Mobil Menü
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-// Back to Top Butonu
-const backToTop = document.getElementById('back-to-top');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        backToTop.style.display = 'flex';
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-</script>
+
+
+        // Back to Top
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 400) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+
+        });
+
+
+
+        backToTop.addEventListener('click', () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        });
+
+
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+    </script>
 
 
 </body>
+
 </html>
