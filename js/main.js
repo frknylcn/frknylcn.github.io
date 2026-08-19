@@ -7,7 +7,7 @@ const projects = [
         description: "Godot ile geliştirdiğim 2D madencilik oyunu. Oyuncu madenleri keşfediyor, değerli kaynaklar topluyor, ekipmanlarını geliştiriyor ve farklı özelliklerin kilidini açıyor.",
         tech: "Godot • GDScript • Android",
         image: "images/projects/karanlik-madenci.jpg",
-        link: "#",
+        link: "",
         status: "Geliştiriliyor"
     },
     {
@@ -15,7 +15,7 @@ const projects = [
         description: "Kullanıcının elindeki malzemeleri seçerek yapabileceği yemekleri bulmasına yardımcı olan mobil tarif uygulaması. Yüzlerce Türk yemeği, tatlı, içecek ve atıştırmalık içeriyor.",
         tech: "JavaScript • Vite • Capacitor • Android",
         image: "images/projects/dolapta-ne-var.jpeg",
-        link: "#",
+        link: "",
         status: "Android Uygulaması"
     },
     {
@@ -23,7 +23,7 @@ const projects = [
         description: "Godot ile geliştirdiğim 2D strateji oyunu. Oyuncular asker üreterek kendi kalelerini korurken rakip kaleyi yok etmeye çalışıyor.",
         tech: "Godot • GDScript",
         image: "images/projects/haspet-defense.jpg",
-        link: "#",
+        link: "",
         status: "Oyun Projesi"
     },
     {
@@ -83,12 +83,23 @@ if (container) {
                         ${project.tech}
                     </p>
 
-                    <a
-                        href="${project.link}"
-                        class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition"
-                    >
-                        Projeyi İncele →
-                    </a>
+                   ${project.link
+    ? `
+        <a
+            href="${project.link}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition"
+        >
+            Projeyi İncele →
+        </a>
+    `
+    : `
+        <span class="inline-flex items-center gap-2 text-zinc-600 font-medium cursor-not-allowed">
+            Proje bağlantısı yakında
+        </span>
+    `
+}
 
                 </div>
 
