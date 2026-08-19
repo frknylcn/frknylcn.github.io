@@ -87,30 +87,46 @@
                 </div>
 
             <!-- Sağ Taraf - Form -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm mb-2">Adın Soyadın</label>
-                        <input type="text" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm mb-2">E-posta Adresin</label>
-                        <input type="email" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm mb-2">Mesajın</label>
-                        <textarea rows="6" class="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 focus:outline-none focus:border-purple-500"></textarea>
-                    </div>
-                    <button type="button" 
-                            class="w-full bg-purple-600 hover:bg-purple-700 py-5 rounded-2xl font-medium text-lg transition">
-                        Mesaj Gönder
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+    <form action="https://formspree.io/f/mjybpqjp"
+          method="POST"
+          class="space-y-4">
 
-    <script src="js/main.js"></script>
+        <div>
+            <label class="block text-sm mb-2">Adın Soyadın</label>
+            <input
+                type="text"
+                name="name"
+                required
+                class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
+        </div>
+
+        <div>
+            <label class="block text-sm mb-2">E-posta Adresin</label>
+            <input
+                type="email"
+                name="email"
+                required
+                class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
+        </div>
+
+        <div>
+            <label class="block text-sm mb-2">Mesajın</label>
+            <textarea
+                name="message"
+                rows="6"
+                required
+                class="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 focus:outline-none focus:border-purple-500"></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="w-full bg-purple-600 hover:bg-purple-700 py-5 rounded-2xl font-medium text-lg transition">
+            Mesaj Gönder
+        </button>
+
+    </form>
+</div>
 
     <!-- Footer -->
 <footer class="border-t border-zinc-800 bg-zinc-950 py-16">
