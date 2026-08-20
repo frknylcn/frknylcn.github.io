@@ -1,211 +1,627 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Yalçın | Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</title>
 
-<meta name="description"
-      content="Furkan Yalçın ile projeler, yazılım geliştirme ve diğer konular hakkında iletişime geçin.">
-   <meta name="keywords" content="Furkan Yalçın, bilgisayar mühendisi,Teknoloji,Blog, My Blog, web geliştirme, portfolio, frontend, javascript, oyun geliştirme,bilgisayar,furkan, yalçın furkan,mühendis">
+    <title>İletişim | Furkan Yalçın</title>
+
+    <!-- SEO -->
+    <meta name="description"
+          content="Bilgisayar Mühendisliği öğrencisi ve yazılım geliştirici Furkan Yalçın ile projeler, yazılım geliştirme, oyun geliştirme ve diğer konular hakkında iletişime geçin.">
+
     <meta name="author" content="Furkan Yalçın">
-    
-    <!-- Open Graph (Sosyal medyada güzel görünmesi için) -->
-    <meta property="og:title" content="Furkan Yalçın - Portfolio">
-    <meta property="og:description" content="Bilgisayar Mühendisliği 1. sınıf öğrencisi ve geliştirici">
-    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical"
+          href="https://frknylcn.github.io/contact.html">
+
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="İletişim | Furkan Yalçın">
+
+    <meta property="og:description"
+          content="Furkan Yalçın ile yazılım, oyun geliştirme, projeler ve teknoloji hakkında iletişime geçin.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://frknylcn.github.io/contact.html">
+
+    <meta property="og:image"
+          content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
+
+    <meta property="og:locale"
+          content="tr_TR">
+
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="İletişim | Furkan Yalçın">
+
+    <meta name="twitter:description"
+          content="Projeler, yazılım geliştirme ve teknoloji hakkında benimle iletişime geçin.">
+
+    <meta name="twitter:image"
+          content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
+
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-            <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon"
+          href="/assets/images/favicon.png"
+          type="image/png">
+
+    <link rel="apple-touch-icon"
+          href="/assets/images/favicon.png">
+
 </head>
+
+
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <a href="index.html"
-   class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
-    Karanlık<span class="text-purple-500">Yol</span>
-</a>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 text-lg">
-            <a href="index.html" class="hover:text-purple-400 transition">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400 transition">Projeler</a>
-            <a href="blog.html" class="hover:text-purple-400 transition">Blog</a>
-            <a href="about.html" class="hover:text-purple-400 transition">Hakkımda</a>
-            <a href="contact.html" class="text-purple-400 font-medium">İletişim</a>
+
+
+    <!-- ========================= -->
+    <!-- NAVIGATION -->
+    <!-- ========================= -->
+
+    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+
+            <!-- Logo -->
+            <a href="/"
+               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+
+                Karanlık<span class="text-purple-500">Yol</span>
+
+            </a>
+
+
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex items-center space-x-8 text-lg">
+
+                <a href="/"
+                   class="hover:text-purple-400 transition">
+                    Ana Sayfa
+                </a>
+
+                <a href="/projects.html"
+                   class="hover:text-purple-400 transition">
+                    Projeler
+                </a>
+
+                <a href="/blog.html"
+                   class="hover:text-purple-400 transition">
+                    Blog
+                </a>
+
+                <a href="/about.html"
+                   class="hover:text-purple-400 transition">
+                    Hakkımda
+                </a>
+
+                <a href="/contact.html"
+                   class="text-purple-400 font-medium">
+                    İletişim
+                </a>
+
+            </div>
+
+
+            <!-- Mobil Menü -->
+            <button id="menu-button"
+                    class="md:hidden text-4xl focus:outline-none"
+                    aria-label="Menüyü aç">
+
+                ☰
+
+            </button>
+
         </div>
 
-        <!-- Mobil Hamburger -->
-        <button id="menu-button" class="md:hidden text-4xl focus:outline-none">☰</button>
-    </div>
 
-    <!-- Mobil Menü -->
-    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
-        <div class="flex flex-col space-y-6 px-6 text-lg">
-            <a href="index.html" class="hover:text-purple-400">Ana Sayfa</a>
-            <a href="projects.html" class="hover:text-purple-400">Projeler</a>
-            <a href="blog.html" class="hover:text-purple-400">Blog</a>
-            <a href="about.html" class="hover:text-purple-400">Hakkımda</a>
-            <a href="contact.html" class="hover:text-purple-400">İletişim</a>
+        <!-- Mobil Menü İçeriği -->
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+
+            <div class="flex flex-col space-y-6 px-6 text-lg">
+
+                <a href="/"
+                   class="hover:text-purple-400">
+                    Ana Sayfa
+                </a>
+
+                <a href="/projects.html"
+                   class="hover:text-purple-400">
+                    Projeler
+                </a>
+
+                <a href="/blog.html"
+                   class="hover:text-purple-400">
+                    Blog
+                </a>
+
+                <a href="/about.html"
+                   class="hover:text-purple-400">
+                    Hakkımda
+                </a>
+
+                <a href="/contact.html"
+                   class="text-purple-400 font-medium">
+                    İletişim
+                </a>
+
+            </div>
+
         </div>
-    </div>
-</nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold mb-4">İletişime Geç</h2>
-            <p class="text-zinc-400 text-xl">Birlikte çalışalım, soru sor veya sadece selam ver!</p>
-        </div>
+    </nav>
 
-        <div class="grid md:grid-cols-2 gap-12">
-                             <div>
-                    <h3 class="text-xl font-semibold mb-6 text-purple-400">İletişim Bilgilerim</h3>
-                    <div class="space-y-8">
-                        <!-- E-posta -->
-                        <div class="flex items-start gap-5">
-                            <i class="fa-solid fa-envelope text-3xl text-purple-400 mt-1"></i>
-                            <div>
-                                <p class="font-medium text-lg">E-posta</p>
-                                <a href="mailto:yalcinfurkan54@gmail.com" class="text-zinc-400 hover:text-purple-400 transition">
-                                    yalcinfurkan54@gmail.com
-                                </a>
-                            </div>
+
+
+    <!-- ========================= -->
+    <!-- ANA İÇERİK -->
+    <!-- ========================= -->
+
+    <main class="max-w-5xl mx-auto px-6 py-20">
+
+
+        <!-- Başlık -->
+        <header class="text-center mb-16">
+
+            <p class="text-purple-400 font-medium tracking-wider mb-4">
+                İLETİŞİM
+            </p>
+
+            <h1 class="text-5xl md:text-6xl font-bold mb-5">
+                İletişime Geç
+            </h1>
+
+            <p class="text-zinc-400 text-xl max-w-2xl mx-auto leading-relaxed">
+                Projelerim hakkında konuşmak, fikir paylaşmak veya
+                benimle iletişime geçmek için mesaj gönderebilirsin.
+            </p>
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- İLETİŞİM ALANI -->
+        <!-- ========================= -->
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+
+            <!-- SOL TARAF -->
+            <div>
+
+                <h2 class="text-2xl font-semibold mb-8 text-purple-400">
+                    İletişim Bilgilerim
+                </h2>
+
+
+                <div class="space-y-7">
+
+
+                    <!-- E-posta -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                                flex items-start gap-5
+                                hover:border-purple-500 transition">
+
+                        <i class="fa-solid fa-envelope text-3xl text-purple-400 mt-1"></i>
+
+                        <div>
+
+                            <p class="font-medium text-lg mb-1">
+                                E-posta
+                            </p>
+
+                            <a href="mailto:yalcinfurkan54@gmail.com"
+                               class="text-zinc-400 hover:text-purple-400 transition break-all">
+
+                                yalcinfurkan54@gmail.com
+
+                            </a>
+
                         </div>
 
-                        <!-- Instagram -->
-                        <div class="flex items-start gap-5">
-                            <i class="fa-brands fa-instagram text-3xl text-purple-400 mt-1"></i>
-                            <div>
-                                <p class="font-medium text-lg">Instagram</p>
-                                <a href="https://instagram.com/frkn.ylcn49" target="_blank" 
-                                   class="text-zinc-400 hover:text-purple-400 transition">
-                                    @frkn.ylcn49
-                                </a>
-                            </div>
-                        </div>
                     </div>
+
+
+
+                    <!-- GitHub -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                                flex items-start gap-5
+                                hover:border-purple-500 transition">
+
+                        <i class="fa-brands fa-github text-3xl text-purple-400 mt-1"></i>
+
+                        <div>
+
+                            <p class="font-medium text-lg mb-1">
+                                GitHub
+                            </p>
+
+                            <a href="https://github.com/frknyl"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-zinc-400 hover:text-purple-400 transition">
+
+                                github.com/frknyl
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Instagram -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                                flex items-start gap-5
+                                hover:border-purple-500 transition">
+
+                        <i class="fa-brands fa-instagram text-3xl text-purple-400 mt-1"></i>
+
+                        <div>
+
+                            <p class="font-medium text-lg mb-1">
+                                Instagram
+                            </p>
+
+                            <a href="https://instagram.com/frkn.ylcn49"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-zinc-400 hover:text-purple-400 transition">
+
+                                @frkn.ylcn49
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-            <!-- Sağ Taraf - Form -->
-<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-    <form action="https://formspree.io/f/mjybpqjp"
-          method="POST"
-          class="space-y-4">
 
-        <div>
-            <label class="block text-sm mb-2">Adın Soyadın</label>
-            <input
-                type="text"
-                name="name"
-                required
-                class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
-        </div>
 
-        <div>
-            <label class="block text-sm mb-2">E-posta Adresin</label>
-            <input
-                type="email"
-                name="email"
-                required
-                class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500">
-        </div>
+                <!-- Küçük Bilgi -->
+                <div class="mt-8 border border-purple-500/20
+                            bg-purple-500/5
+                            rounded-2xl p-6">
 
-        <div>
-            <label class="block text-sm mb-2">Mesajın</label>
-            <textarea
-                name="message"
-                rows="6"
-                required
-                class="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 focus:outline-none focus:border-purple-500"></textarea>
-        </div>
+                    <p class="text-zinc-400 leading-relaxed">
 
-        <button
-            type="submit"
-            class="w-full bg-purple-600 hover:bg-purple-700 py-5 rounded-2xl font-medium text-lg transition">
-            Mesaj Gönder
-        </button>
+                        Yazılım, oyun geliştirme, web projeleri veya
+                        geliştirdiğim uygulamalar hakkında iletişime
+                        geçebilirsin.
 
-    </form>
-</div>
+                    </p>
 
-    <!-- Footer -->
-<footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+                </div>
 
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            </div>
 
-        <div>
-            <p class="text-lg font-semibold">
-                Furkan Yalçın
+
+
+            <!-- ========================= -->
+            <!-- SAĞ TARAF - FORM -->
+            <!-- ========================= -->
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10">
+
+
+                <h2 class="text-2xl font-semibold mb-2">
+                    Mesaj Gönder
+                </h2>
+
+                <p class="text-zinc-500 mb-8">
+                    Formu doldurarak doğrudan bana mesaj gönderebilirsin.
+                </p>
+
+
+                <form action="https://formspree.io/f/mjybpqjp"
+                      method="POST"
+                      class="space-y-5">
+
+
+                    <!-- İsim -->
+                    <div>
+
+                        <label for="name"
+                               class="block text-sm mb-2 text-zinc-300">
+
+                            Adın Soyadın
+
+                        </label>
+
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            autocomplete="name"
+                            required
+                            placeholder="Ad Soyad"
+                            class="w-full bg-zinc-950
+                                   border border-zinc-700
+                                   rounded-2xl
+                                   px-5 py-4
+                                   focus:outline-none
+                                   focus:border-purple-500">
+
+                    </div>
+
+
+
+                    <!-- E-posta -->
+                    <div>
+
+                        <label for="email"
+                               class="block text-sm mb-2 text-zinc-300">
+
+                            E-posta Adresin
+
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                            placeholder="ornek@email.com"
+                            class="w-full bg-zinc-950
+                                   border border-zinc-700
+                                   rounded-2xl
+                                   px-5 py-4
+                                   focus:outline-none
+                                   focus:border-purple-500">
+
+                    </div>
+
+
+
+                    <!-- Mesaj -->
+                    <div>
+
+                        <label for="message"
+                               class="block text-sm mb-2 text-zinc-300">
+
+                            Mesajın
+
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            required
+                            placeholder="Mesajını buraya yaz..."
+                            class="w-full bg-zinc-950
+                                   border border-zinc-700
+                                   rounded-2xl
+                                   px-5 py-4
+                                   focus:outline-none
+                                   focus:border-purple-500
+                                   resize-y"></textarea>
+
+                    </div>
+
+
+
+                    <!-- Gönder -->
+                    <button
+                        type="submit"
+                        class="w-full
+                               bg-purple-600
+                               hover:bg-purple-700
+                               py-4
+                               rounded-2xl
+                               font-semibold
+                               text-lg
+                               transition">
+
+                        Mesaj Gönder →
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- ALT CTA -->
+        <!-- ========================= -->
+
+        <section class="mt-20">
+
+            <div class="text-center
+                        border border-zinc-800
+                        bg-zinc-900/50
+                        rounded-3xl
+                        p-8 md:p-10">
+
+                <p class="text-zinc-400 mb-5">
+                    İletişime geçmeden önce çalışmalarımı görmek ister misin?
+                </p>
+
+                <a href="/projects.html"
+                   class="inline-flex
+                          text-purple-400
+                          hover:text-purple-300
+                          font-medium">
+
+                    Geliştirdiğim projeleri incele →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+
+        <div class="max-w-6xl mx-auto px-6
+                    flex flex-col md:flex-row
+                    justify-between items-center gap-6">
+
+
+            <div>
+
+                <p class="text-lg font-semibold">
+                    Furkan Yalçın
+                </p>
+
+                <p class="text-zinc-500 text-sm mt-1">
+                    Bilgisayar Mühendisliği Öğrencisi
+                </p>
+
+            </div>
+
+
+
+            <div class="flex items-center gap-6 text-zinc-400">
+
+                <a href="https://github.com/frknyl"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 transition">
+
+                    GitHub
+
+                </a>
+
+
+                <a href="/projects.html"
+                   class="hover:text-purple-400 transition">
+
+                    Projeler
+
+                </a>
+
+
+                <a href="/contact.html"
+                   class="hover:text-purple-400 transition">
+
+                    İletişim
+
+                </a>
+
+            </div>
+
+
+
+            <p class="text-zinc-600 text-sm">
+                © 2026 Furkan Yalçın
             </p>
 
-            <p class="text-zinc-500 text-sm mt-1">
-                Bilgisayar Mühendisliği Öğrencisi
-            </p>
-        </div>
-
-
-        <div class="flex items-center gap-6 text-zinc-400">
-
-            <a
-                href="https://github.com/frknylcn"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-purple-400 transition">
-                GitHub
-            </a>
-
-            <a
-                href="projects.html"
-                class="hover:text-purple-400 transition">
-                Projeler
-            </a>
-
-            <a
-                href="contact.html"
-                class="hover:text-purple-400 transition">
-                İletişim
-            </a>
 
         </div>
 
+    </footer>
 
-        <p class="text-zinc-600 text-sm">
-            © 2026 Furkan Yalçın
-        </p>
 
-    </div>
 
-</footer>
+    <!-- BACK TO TOP -->
+    <button id="back-to-top"
+            aria-label="Sayfanın başına dön">
+
+        ↑
+
+    </button>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
     <script>
-    const menuBtn = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('active');
-    });
-</script>
-<!-- Back to Top -->
-<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+        // Mobil Menü
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-// Back to Top Butonu
-const backToTop = document.getElementById('back-to-top');
+        menuBtn.addEventListener('click', () => {
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        backToTop.style.display = 'flex';
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-</script>
+            mobileMenu.classList.toggle('hidden');
+
+        });
+
+
+
+        // Back to Top
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 400) {
+
+                backToTop.style.display = 'flex';
+
+            } else {
+
+                backToTop.style.display = 'none';
+
+            }
+
+        });
+
+
+
+        backToTop.addEventListener('click', () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        });
+
+    </script>
 
 
 </body>
+
 </html>
