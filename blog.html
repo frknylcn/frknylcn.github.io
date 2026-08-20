@@ -5,59 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Furkan Yalçın | Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</title>
+    <title>Blog | Furkan Yalçın</title>
 
+    <!-- SEO -->
     <meta name="description"
-          content="Yazılım geliştirme, oyun geliştirme, Android uygulamaları ve öğrendiğim teknolojiler hakkında deneyimlerimi paylaştığım kişisel blog.">
+          content="Furkan Yalçın'ın yazılım geliştirme, Godot, Android, Google Play, web geliştirme ve kişisel proje deneyimlerini paylaştığı blog.">
 
     <meta name="author" content="Furkan Yalçın">
     <meta name="robots" content="index, follow">
 
+    <!-- Canonical -->
     <link rel="canonical"
-          href="https://frknylcn.github.io/portfolio/blog.html">
+          href="https://frknylcn.github.io/blog.html">
+
 
     <!-- Open Graph -->
     <meta property="og:title"
           content="Blog | Furkan Yalçın">
 
     <meta property="og:description"
-          content="Yazılım, oyun geliştirme ve teknoloji üzerine öğrendiklerimi ve proje deneyimlerimi paylaşıyorum.">
+          content="Yazılım, oyun geliştirme, Android ve web projelerinde öğrendiklerimi ve geliştirme deneyimlerimi paylaşıyorum.">
 
-    <meta property="og:type" content="website">
+    <meta property="og:type"
+          content="website">
 
     <meta property="og:url"
-          content="https://frknylcn.github.io/portfolio/blog.html">
+          content="https://frknylcn.github.io/blog.html">
 
     <meta property="og:image"
-          content="https://frknylcn.github.io/portfolio/images/projects/portfolio.jpeg">
+          content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
 
-    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale"
+          content="tr_TR">
+
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card"
+          content="summary_large_image">
 
     <meta name="twitter:title"
           content="Blog | Furkan Yalçın">
 
     <meta name="twitter:description"
-          content="Yazılım, oyun geliştirme ve proje deneyimlerim üzerine yazılar.">
+          content="Yazılım, oyun geliştirme, Android ve web projelerim üzerine deneyimler ve yazılar.">
 
     <meta name="twitter:image"
-          content="https://frknylcn.github.io/portfolio/images/projects/portfolio.jpeg">
+          content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
+
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="/css/style.css">
+
 
     <!-- Favicon -->
     <link rel="icon"
-          href="assets/images/favicon.png"
+          href="/assets/images/favicon.png"
           type="image/png">
 
     <link rel="apple-touch-icon"
-          href="assets/images/favicon.png">
+          href="/assets/images/favicon.png">
+
 </head>
 
 
@@ -69,7 +81,9 @@
 
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
 
-            <a href="index.html"
+
+            <!-- Logo -->
+            <a href="/"
                class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
 
                 Karanlık<span class="text-purple-500">Yol</span>
@@ -80,27 +94,27 @@
             <!-- Desktop Menü -->
             <div class="hidden md:flex items-center space-x-8 text-lg">
 
-                <a href="index.html"
+                <a href="/"
                    class="hover:text-purple-400 transition">
                     Ana Sayfa
                 </a>
 
-                <a href="projects.html"
+                <a href="/projects.html"
                    class="hover:text-purple-400 transition">
                     Projeler
                 </a>
 
-                <a href="blog.html"
+                <a href="/blog.html"
                    class="text-purple-400 font-medium">
                     Blog
                 </a>
 
-                <a href="about.html"
+                <a href="/about.html"
                    class="hover:text-purple-400 transition">
                     Hakkımda
                 </a>
 
-                <a href="contact.html"
+                <a href="/contact.html"
                    class="hover:text-purple-400 transition">
                     İletişim
                 </a>
@@ -112,7 +126,9 @@
             <button id="menu-button"
                     class="md:hidden text-3xl focus:outline-none"
                     aria-label="Menüyü aç">
+
                 ☰
+
             </button>
 
         </div>
@@ -124,27 +140,27 @@
 
             <div class="flex flex-col space-y-6 px-6 text-lg">
 
-                <a href="index.html"
+                <a href="/"
                    class="hover:text-purple-400">
                     Ana Sayfa
                 </a>
 
-                <a href="projects.html"
+                <a href="/projects.html"
                    class="hover:text-purple-400">
                     Projeler
                 </a>
 
-                <a href="blog.html"
+                <a href="/blog.html"
                    class="text-purple-400 font-medium">
                     Blog
                 </a>
 
-                <a href="about.html"
+                <a href="/about.html"
                    class="hover:text-purple-400">
                     Hakkımda
                 </a>
 
-                <a href="contact.html"
+                <a href="/contact.html"
                    class="hover:text-purple-400">
                     İletişim
                 </a>
@@ -160,10 +176,12 @@
     <main>
 
 
+        <!-- ========================= -->
         <!-- BLOG HERO -->
+        <!-- ========================= -->
+
         <section class="relative overflow-hidden">
 
-            <!-- Arka plan ışığı -->
             <div class="absolute inset-0 pointer-events-none">
 
                 <div class="absolute top-0 left-1/3
@@ -184,16 +202,15 @@
                         BLOG
                     </p>
 
-
                     <h1 class="text-5xl md:text-6xl font-bold mb-6">
                         Yazılarım
                     </h1>
 
-
                     <p class="text-zinc-400 text-xl leading-relaxed">
 
                         Yazılım geliştirirken, oyun ve mobil uygulamalar üretirken
-                        öğrendiklerimi ve karşılaştığım problemleri burada paylaşıyorum.
+                        öğrendiklerimi, karşılaştığım problemleri ve geliştirme
+                        deneyimlerimi burada paylaşıyorum.
 
                     </p>
 
@@ -205,30 +222,222 @@
 
 
 
-        <!-- BLOG KARTLARI -->
+        <!-- ========================= -->
+        <!-- BLOG YAZILARI -->
+        <!-- ========================= -->
+
         <section class="max-w-6xl mx-auto px-6 pb-24 reveal">
 
-            <div class="flex items-center justify-between gap-6 mb-10">
+            <div class="mb-10">
 
-                <div>
+                <h2 class="text-3xl font-semibold">
+                    Son Yazılar
+                </h2>
 
-                    <h2 class="text-3xl font-semibold">
-                        Son Yazılar
-                    </h2>
-
-                    <p class="text-zinc-500 mt-2">
-                        Projelerimden ve öğrenme sürecimden notlar.
-                    </p>
-
-                </div>
+                <p class="text-zinc-500 mt-2">
+                    Projelerimden ve öğrenme sürecimden notlar.
+                </p>
 
             </div>
 
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8"
-                 id="blog-container">
 
-                <!-- main.js tarafından eklenecek -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                <!-- ========================= -->
+                <!-- GOOGLE PLAY -->
+                <!-- ========================= -->
+
+                <article class="blog-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-purple-500 transition h-full flex flex-col">
+
+
+                    <div class="mb-5">
+
+                        <span class="inline-block
+                                     bg-purple-500/10
+                                     text-purple-400
+                                     border border-purple-500/20
+                                     px-3 py-1
+                                     rounded-full
+                                     text-xs font-medium">
+
+                            Android • Google Play
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-zinc-500 text-sm mb-3">
+                        19 Ağustos 2026
+                    </p>
+
+
+                    <h2 class="text-2xl font-semibold mb-4">
+
+                        Android Uygulamamı Google Play'e Hazırlama Sürecim
+
+                    </h2>
+
+
+                    <p class="text-zinc-400 mb-7 flex-grow leading-relaxed">
+
+                        Bir Android uygulamasını Google Play'e hazırlarken
+                        AAB oluşturma, mağaza girişi, kapalı test ve
+                        yayınlama sürecinde öğrendiklerimi paylaşıyorum.
+
+                    </p>
+
+
+                    <a href="/blog-google-play.html"
+                       class="group text-purple-400
+                              hover:text-purple-300
+                              font-medium
+                              inline-flex items-center
+                              gap-2 mt-auto">
+
+                        Google Play yayınlama sürecimi oku
+
+                        <span class="group-hover:translate-x-1 transition">
+                            →
+                        </span>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- ========================= -->
+                <!-- KARANLIK MADENCİ -->
+                <!-- ========================= -->
+
+                <article class="blog-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-purple-500 transition h-full flex flex-col">
+
+
+                    <div class="mb-5">
+
+                        <span class="inline-block
+                                     bg-purple-500/10
+                                     text-purple-400
+                                     border border-purple-500/20
+                                     px-3 py-1
+                                     rounded-full
+                                     text-xs font-medium">
+
+                            Godot • GDScript
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-zinc-500 text-sm mb-3">
+                        19 Ağustos 2026
+                    </p>
+
+
+                    <h2 class="text-2xl font-semibold mb-4">
+
+                        Godot ile Karanlık Madenci'yi Geliştirirken Öğrendiklerim
+
+                    </h2>
+
+
+                    <p class="text-zinc-400 mb-7 flex-grow leading-relaxed">
+
+                        Godot ile geliştirdiğim 2D madencilik oyununda
+                        TileMap, envanter, dinamit, mobil kontroller ve
+                        hata ayıklama süreçlerinde öğrendiklerimi anlatıyorum.
+
+                    </p>
+
+
+                    <a href="/blog-karanlik-madenci.html"
+                       class="group text-purple-400
+                              hover:text-purple-300
+                              font-medium
+                              inline-flex items-center
+                              gap-2 mt-auto">
+
+                        Karanlık Madenci geliştirme sürecini oku
+
+                        <span class="group-hover:translate-x-1 transition">
+                            →
+                        </span>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- ========================= -->
+                <!-- PORTFOLIO -->
+                <!-- ========================= -->
+
+                <article class="blog-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-purple-500 transition h-full flex flex-col">
+
+
+                    <div class="mb-5">
+
+                        <span class="inline-block
+                                     bg-purple-500/10
+                                     text-purple-400
+                                     border border-purple-500/20
+                                     px-3 py-1
+                                     rounded-full
+                                     text-xs font-medium">
+
+                            Web • GitHub • SEO
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-zinc-500 text-sm mb-3">
+                        19 Ağustos 2026
+                    </p>
+
+
+                    <h2 class="text-2xl font-semibold mb-4">
+
+                        Kendi Portfolio Sitemi Geliştirirken Neler Öğrendim?
+
+                    </h2>
+
+
+                    <p class="text-zinc-400 mb-7 flex-grow leading-relaxed">
+
+                        HTML, Tailwind CSS, JavaScript, GitHub Pages,
+                        Formspree, SEO ve Google Search Console kullanarak
+                        portfolio sitemi geliştirirken öğrendiklerimi anlatıyorum.
+
+                    </p>
+
+
+                    <a href="/blog-portfolio.html"
+                       class="group text-purple-400
+                              hover:text-purple-300
+                              font-medium
+                              inline-flex items-center
+                              gap-2 mt-auto">
+
+                        Portfolio geliştirme sürecimi oku
+
+                        <span class="group-hover:translate-x-1 transition">
+                            →
+                        </span>
+
+                    </a>
+
+
+                </article>
+
 
             </div>
 
@@ -236,7 +445,10 @@
 
 
 
+        <!-- ========================= -->
         <!-- BLOG CTA -->
+        <!-- ========================= -->
+
         <section class="max-w-6xl mx-auto px-6 pb-24 reveal">
 
             <div class="border border-purple-500/20
@@ -250,6 +462,7 @@
                         items-start md:items-center
                         gap-8">
 
+
                 <div class="max-w-2xl">
 
                     <p class="text-purple-400 font-medium mb-3">
@@ -261,14 +474,17 @@
                     </h2>
 
                     <p class="text-zinc-400 leading-relaxed">
-                        Oyun, mobil uygulama ve web projelerimde kullandığım
-                        teknolojileri ve geliştirme süreçlerini görebilirsin.
+
+                        Godot oyunları, Android uygulamaları ve web
+                        projelerimde kullandığım teknolojileri ve
+                        geliştirme süreçlerini inceleyebilirsin.
+
                     </p>
 
                 </div>
 
 
-                <a href="projects.html"
+                <a href="/projects.html"
                    class="flex-shrink-0
                           bg-purple-600
                           hover:bg-purple-700
@@ -277,24 +493,30 @@
                           font-semibold
                           transition">
 
-                    Projelere Git →
+                    Projelerimi İncele →
 
                 </a>
+
 
             </div>
 
         </section>
 
+
     </main>
 
 
 
+    <!-- ========================= -->
     <!-- FOOTER -->
+    <!-- ========================= -->
+
     <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
 
         <div class="max-w-6xl mx-auto px-6
                     flex flex-col md:flex-row
                     justify-between items-center gap-6">
+
 
             <div>
 
@@ -309,31 +531,42 @@
             </div>
 
 
+
             <div class="flex items-center gap-6 text-zinc-400">
 
                 <a href="https://github.com/frknylcn"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-purple-400 transition">
+
                     GitHub
+
                 </a>
 
-                <a href="projects.html"
+
+                <a href="/projects.html"
                    class="hover:text-purple-400 transition">
+
                     Projeler
+
                 </a>
 
-                <a href="contact.html"
+
+                <a href="/contact.html"
                    class="hover:text-purple-400 transition">
+
                     İletişim
+
                 </a>
 
             </div>
 
 
+
             <p class="text-zinc-600 text-sm">
                 © 2026 Furkan Yalçın
             </p>
+
 
         </div>
 
@@ -349,10 +582,6 @@
 
 
 
-    <!-- Blog kartları -->
-    <script src="js/main.js"></script>
-
-
     <script>
 
         // Mobil Menü
@@ -360,7 +589,9 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
+
             mobileMenu.classList.toggle('hidden');
+
         });
 
 
@@ -371,9 +602,13 @@
         window.addEventListener('scroll', () => {
 
             if (window.scrollY > 400) {
+
                 backToTop.style.display = 'flex';
+
             } else {
+
                 backToTop.style.display = 'none';
+
             }
 
         });
@@ -400,8 +635,11 @@
                 entries.forEach(entry => {
 
                     if (entry.isIntersecting) {
+
                         entry.target.classList.add('active');
+
                         revealObserver.unobserve(entry.target);
+
                     }
 
                 });
@@ -414,7 +652,9 @@
 
 
         revealElements.forEach(element => {
+
             revealObserver.observe(element);
+
         });
 
     </script>
