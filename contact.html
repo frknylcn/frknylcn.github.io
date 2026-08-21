@@ -29,6 +29,9 @@
     <meta property="og:type"
           content="website">
 
+    <meta property="og:site_name"
+          content="Furkan Yalçın">
+
     <meta property="og:url"
           content="https://frknylcn.github.io/contact.html">
 
@@ -53,6 +56,11 @@
           content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
 
 
+    <!-- Tema -->
+    <meta name="theme-color"
+          content="#09090b">
+
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -69,11 +77,12 @@
 
     <!-- Favicon -->
     <link rel="icon"
-          href="/assets/images/favicon.png"
-          type="image/png">
+          type="image/png"
+          sizes="192x192"
+          href="/favicon.png">
 
     <link rel="apple-touch-icon"
-          href="/assets/images/favicon.png">
+          href="/favicon.png">
 
 </head>
 
@@ -85,14 +94,23 @@
     <!-- NAVIGATION -->
     <!-- ========================= -->
 
-    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+    <nav class="border-b border-zinc-800
+                bg-zinc-950/90
+                backdrop-blur-xl
+                sticky top-0 z-50">
 
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto
+                    px-6 py-5
+                    flex justify-between items-center">
 
 
             <!-- Logo -->
             <a href="/"
-               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+               class="text-3xl
+                      font-bold
+                      tracking-tight
+                      hover:text-purple-400
+                      transition">
 
                 Karanlık<span class="text-purple-500">Yol</span>
 
@@ -100,7 +118,10 @@
 
 
             <!-- Desktop Menü -->
-            <div class="hidden md:flex items-center space-x-8 text-lg">
+            <div class="hidden md:flex
+                        items-center
+                        space-x-8
+                        text-lg">
 
                 <a href="/"
                    class="hover:text-purple-400 transition">
@@ -123,6 +144,7 @@
                 </a>
 
                 <a href="/contact.html"
+                   aria-current="page"
                    class="text-purple-400 font-medium">
                     İletişim
                 </a>
@@ -133,7 +155,8 @@
             <!-- Mobil Menü -->
             <button id="menu-button"
                     class="md:hidden text-4xl focus:outline-none"
-                    aria-label="Menüyü aç">
+                    aria-label="Menüyü aç"
+                    aria-expanded="false">
 
                 ☰
 
@@ -144,9 +167,16 @@
 
         <!-- Mobil Menü İçeriği -->
         <div id="mobile-menu"
-             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+             class="hidden
+                    md:hidden
+                    bg-zinc-950
+                    border-t border-zinc-800
+                    py-6">
 
-            <div class="flex flex-col space-y-6 px-6 text-lg">
+            <div class="flex flex-col
+                        space-y-6
+                        px-6
+                        text-lg">
 
                 <a href="/"
                    class="hover:text-purple-400">
@@ -169,6 +199,7 @@
                 </a>
 
                 <a href="/contact.html"
+                   aria-current="page"
                    class="text-purple-400 font-medium">
                     İletişim
                 </a>
@@ -191,17 +222,34 @@
         <!-- Başlık -->
         <header class="text-center mb-16">
 
-            <p class="text-purple-400 font-medium tracking-wider mb-4">
+            <p class="text-purple-400
+                      font-medium
+                      tracking-wider
+                      mb-4">
+
                 İLETİŞİM
+
             </p>
 
-            <h1 class="text-5xl md:text-6xl font-bold mb-5">
+
+            <h1 class="text-5xl md:text-6xl
+                       font-bold
+                       mb-5">
+
                 İletişime Geç
+
             </h1>
 
-            <p class="text-zinc-400 text-xl max-w-2xl mx-auto leading-relaxed">
-                Projelerim hakkında konuşmak, fikir paylaşmak veya
-                benimle iletişime geçmek için mesaj gönderebilirsin.
+
+            <p class="text-zinc-400
+                      text-xl
+                      max-w-2xl
+                      mx-auto
+                      leading-relaxed">
+
+                Projelerim hakkında konuşmak, fikir paylaşmak
+                veya benimle iletişime geçmek için mesaj gönderebilirsin.
+
             </p>
 
         </header>
@@ -212,14 +260,23 @@
         <!-- İLETİŞİM ALANI -->
         <!-- ========================= -->
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <section class="grid
+                        grid-cols-1
+                        md:grid-cols-2
+                        gap-12
+                        items-start">
 
 
             <!-- SOL TARAF -->
             <div>
 
-                <h2 class="text-2xl font-semibold mb-8 text-purple-400">
+                <h2 class="text-2xl
+                           font-semibold
+                           mb-8
+                           text-purple-400">
+
                     İletişim Bilgilerim
+
                 </h2>
 
 
@@ -227,11 +284,21 @@
 
 
                     <!-- E-posta -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                    <div class="bg-zinc-900
+                                border border-zinc-800
+                                rounded-2xl
+                                p-6
                                 flex items-start gap-5
-                                hover:border-purple-500 transition">
+                                hover:border-purple-500
+                                transition">
 
-                        <i class="fa-solid fa-envelope text-3xl text-purple-400 mt-1"></i>
+                        <i class="fa-solid
+                                  fa-envelope
+                                  text-3xl
+                                  text-purple-400
+                                  mt-1">
+                        </i>
+
 
                         <div>
 
@@ -240,7 +307,10 @@
                             </p>
 
                             <a href="mailto:yalcinfurkan54@gmail.com"
-                               class="text-zinc-400 hover:text-purple-400 transition break-all">
+                               class="text-zinc-400
+                                      hover:text-purple-400
+                                      transition
+                                      break-all">
 
                                 yalcinfurkan54@gmail.com
 
@@ -253,11 +323,21 @@
 
 
                     <!-- GitHub -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                    <div class="bg-zinc-900
+                                border border-zinc-800
+                                rounded-2xl
+                                p-6
                                 flex items-start gap-5
-                                hover:border-purple-500 transition">
+                                hover:border-purple-500
+                                transition">
 
-                        <i class="fa-brands fa-github text-3xl text-purple-400 mt-1"></i>
+                        <i class="fa-brands
+                                  fa-github
+                                  text-3xl
+                                  text-purple-400
+                                  mt-1">
+                        </i>
+
 
                         <div>
 
@@ -265,12 +345,54 @@
                                 GitHub
                             </p>
 
-                            <a href="https://github.com/frknyl"
+                            <a href="https://github.com/frknylcn"
                                target="_blank"
                                rel="noopener noreferrer"
-                               class="text-zinc-400 hover:text-purple-400 transition">
+                               class="text-zinc-400
+                                      hover:text-purple-400
+                                      transition">
 
-                                github.com/frknyl
+                                github.com/frknylcn
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LinkedIn -->
+                    <div class="bg-zinc-900
+                                border border-zinc-800
+                                rounded-2xl
+                                p-6
+                                flex items-start gap-5
+                                hover:border-purple-500
+                                transition">
+
+                        <i class="fa-brands
+                                  fa-linkedin
+                                  text-3xl
+                                  text-purple-400
+                                  mt-1">
+                        </i>
+
+
+                        <div>
+
+                            <p class="font-medium text-lg mb-1">
+                                LinkedIn
+                            </p>
+
+                            <a href="https://www.linkedin.com/in/frknylcn"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-zinc-400
+                                      hover:text-purple-400
+                                      transition">
+
+                                linkedin.com/in/frknylcn
 
                             </a>
 
@@ -281,11 +403,21 @@
 
 
                     <!-- Instagram -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6
+                    <div class="bg-zinc-900
+                                border border-zinc-800
+                                rounded-2xl
+                                p-6
                                 flex items-start gap-5
-                                hover:border-purple-500 transition">
+                                hover:border-purple-500
+                                transition">
 
-                        <i class="fa-brands fa-instagram text-3xl text-purple-400 mt-1"></i>
+                        <i class="fa-brands
+                                  fa-instagram
+                                  text-3xl
+                                  text-purple-400
+                                  mt-1">
+                        </i>
+
 
                         <div>
 
@@ -296,7 +428,9 @@
                             <a href="https://instagram.com/frkn.ylcn49"
                                target="_blank"
                                rel="noopener noreferrer"
-                               class="text-zinc-400 hover:text-purple-400 transition">
+                               class="text-zinc-400
+                                      hover:text-purple-400
+                                      transition">
 
                                 @frkn.ylcn49
 
@@ -312,15 +446,17 @@
 
 
                 <!-- Küçük Bilgi -->
-                <div class="mt-8 border border-purple-500/20
+                <div class="mt-8
+                            border border-purple-500/20
                             bg-purple-500/5
-                            rounded-2xl p-6">
+                            rounded-2xl
+                            p-6">
 
                     <p class="text-zinc-400 leading-relaxed">
 
-                        Yazılım, oyun geliştirme, web projeleri veya
-                        geliştirdiğim uygulamalar hakkında iletişime
-                        geçebilirsin.
+                        Yazılım, oyun geliştirme, web projeleri
+                        veya geliştirdiğim uygulamalar hakkında
+                        iletişime geçebilirsin.
 
                     </p>
 
@@ -334,15 +470,21 @@
             <!-- SAĞ TARAF - FORM -->
             <!-- ========================= -->
 
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10">
+            <div class="bg-zinc-900
+                        border border-zinc-800
+                        rounded-3xl
+                        p-8 md:p-10">
 
 
                 <h2 class="text-2xl font-semibold mb-2">
                     Mesaj Gönder
                 </h2>
 
+
                 <p class="text-zinc-500 mb-8">
+
                     Formu doldurarak doğrudan bana mesaj gönderebilirsin.
+
                 </p>
 
 
@@ -361,6 +503,7 @@
 
                         </label>
 
+
                         <input
                             id="name"
                             type="text"
@@ -368,7 +511,8 @@
                             autocomplete="name"
                             required
                             placeholder="Ad Soyad"
-                            class="w-full bg-zinc-950
+                            class="w-full
+                                   bg-zinc-950
                                    border border-zinc-700
                                    rounded-2xl
                                    px-5 py-4
@@ -389,6 +533,7 @@
 
                         </label>
 
+
                         <input
                             id="email"
                             type="email"
@@ -396,7 +541,8 @@
                             autocomplete="email"
                             required
                             placeholder="ornek@email.com"
-                            class="w-full bg-zinc-950
+                            class="w-full
+                                   bg-zinc-950
                                    border border-zinc-700
                                    rounded-2xl
                                    px-5 py-4
@@ -417,13 +563,15 @@
 
                         </label>
 
+
                         <textarea
                             id="message"
                             name="message"
                             rows="7"
                             required
                             placeholder="Mesajını buraya yaz..."
-                            class="w-full bg-zinc-950
+                            class="w-full
+                                   bg-zinc-950
                                    border border-zinc-700
                                    rounded-2xl
                                    px-5 py-4
@@ -474,8 +622,11 @@
                         p-8 md:p-10">
 
                 <p class="text-zinc-400 mb-5">
+
                     İletişime geçmeden önce çalışmalarımı görmek ister misin?
+
                 </p>
+
 
                 <a href="/projects.html"
                    class="inline-flex
@@ -500,11 +651,19 @@
     <!-- FOOTER -->
     <!-- ========================= -->
 
-    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+    <footer class="border-t border-zinc-800
+                   bg-zinc-950
+                   py-12">
 
-        <div class="max-w-6xl mx-auto px-6
-                    flex flex-col md:flex-row
-                    justify-between items-center gap-6">
+
+        <div class="max-w-6xl
+                    mx-auto
+                    px-6
+                    flex flex-col
+                    md:flex-row
+                    justify-between
+                    items-center
+                    gap-6">
 
 
             <div>
@@ -521,14 +680,30 @@
 
 
 
-            <div class="flex items-center gap-6 text-zinc-400">
+            <div class="flex
+                        flex-wrap
+                        justify-center
+                        items-center
+                        gap-6
+                        text-zinc-400">
 
-                <a href="https://github.com/frknyl"
+
+                <a href="https://github.com/frknylcn"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-purple-400 transition">
 
                     GitHub
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 transition">
+
+                    LinkedIn
 
                 </a>
 
@@ -547,6 +722,7 @@
                     İletişim
 
                 </a>
+
 
             </div>
 
@@ -583,9 +759,15 @@
         const menuBtn = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
+
         menuBtn.addEventListener('click', () => {
 
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            menuBtn.setAttribute(
+                'aria-expanded',
+                String(!isHidden)
+            );
 
         });
 
@@ -593,6 +775,7 @@
 
         // Back to Top
         const backToTop = document.getElementById('back-to-top');
+
 
         window.addEventListener('scroll', () => {
 
