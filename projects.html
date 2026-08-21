@@ -29,6 +29,9 @@
     <meta property="og:type"
           content="website">
 
+    <meta property="og:site_name"
+          content="Furkan Yalçın">
+
     <meta property="og:url"
           content="https://frknylcn.github.io/projects.html">
 
@@ -53,6 +56,11 @@
           content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
 
 
+    <!-- Tarayıcı Tema Rengi -->
+    <meta name="theme-color"
+          content="#09090b">
+
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -64,11 +72,12 @@
 
     <!-- Favicon -->
     <link rel="icon"
-          href="/assets/images/favicon.png"
-          type="image/png">
+          type="image/png"
+          sizes="192x192"
+          href="/favicon.png">
 
     <link rel="apple-touch-icon"
-          href="/assets/images/favicon.png">
+          href="/favicon.png">
 
 </head>
 
@@ -76,20 +85,38 @@
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
 
 
+    <!-- ========================= -->
     <!-- NAVIGATION -->
-    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+    <!-- ========================= -->
 
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+    <nav class="border-b border-zinc-800
+                bg-zinc-950/90
+                backdrop-blur-xl
+                sticky top-0 z-50">
+
+        <div class="max-w-6xl mx-auto
+                    px-6 py-5
+                    flex justify-between items-center">
+
 
             <!-- Logo -->
             <a href="/"
-               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+               class="text-3xl
+                      font-bold
+                      tracking-tight
+                      hover:text-purple-400
+                      transition">
+
                 Karanlık<span class="text-purple-500">Yol</span>
+
             </a>
 
 
             <!-- Desktop Menü -->
-            <div class="hidden md:flex items-center space-x-8 text-lg">
+            <div class="hidden md:flex
+                        items-center
+                        space-x-8
+                        text-lg">
 
                 <a href="/"
                    class="hover:text-purple-400 transition">
@@ -97,6 +124,7 @@
                 </a>
 
                 <a href="/projects.html"
+                   aria-current="page"
                    class="text-purple-400 font-medium">
                     Projeler
                 </a>
@@ -122,8 +150,11 @@
             <!-- Mobil Menü Butonu -->
             <button id="menu-button"
                     class="md:hidden text-4xl focus:outline-none"
-                    aria-label="Menüyü aç">
+                    aria-label="Menüyü aç"
+                    aria-expanded="false">
+
                 ☰
+
             </button>
 
         </div>
@@ -131,9 +162,16 @@
 
         <!-- Mobil Menü -->
         <div id="mobile-menu"
-             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+             class="hidden
+                    md:hidden
+                    bg-zinc-950
+                    border-t border-zinc-800
+                    py-6">
 
-            <div class="flex flex-col space-y-6 px-6 text-lg">
+            <div class="flex flex-col
+                        space-y-6
+                        px-6
+                        text-lg">
 
                 <a href="/"
                    class="hover:text-purple-400">
@@ -141,6 +179,7 @@
                 </a>
 
                 <a href="/projects.html"
+                   aria-current="page"
                    class="text-purple-400 font-medium">
                     Projeler
                 </a>
@@ -168,31 +207,51 @@
 
 
 
+    <!-- ========================= -->
     <!-- ANA İÇERİK -->
+    <!-- ========================= -->
+
     <main class="max-w-6xl mx-auto px-6 py-16">
 
 
         <!-- SAYFA BAŞLIĞI -->
         <header class="mb-14">
 
-            <p class="text-purple-400 font-medium tracking-wider mb-4">
+            <p class="text-purple-400
+                      font-medium
+                      tracking-wider
+                      mb-4">
+
                 ÇALIŞMALARIM
+
             </p>
 
-            <h1 class="text-5xl md:text-6xl font-bold mb-5">
+            <h1 class="text-5xl md:text-6xl
+                       font-bold
+                       mb-5">
+
                 Projelerim
+
             </h1>
 
-            <p class="text-zinc-400 text-xl max-w-3xl leading-relaxed">
+            <p class="text-zinc-400
+                      text-xl
+                      max-w-3xl
+                      leading-relaxed">
+
                 Yazılım, oyun ve mobil uygulama geliştirme sürecinde
                 üzerinde çalıştığım projeler.
+
             </p>
 
         </header>
 
 
 
+        <!-- ========================= -->
         <!-- PROJE KARTLARI -->
+        <!-- ========================= -->
+
         <section>
 
             <div
@@ -206,7 +265,11 @@
         </section>
 
 
+
+        <!-- ========================= -->
         <!-- ALT CTA -->
+        <!-- ========================= -->
+
         <section class="mt-20">
 
             <div class="border border-purple-500/20
@@ -216,23 +279,37 @@
                         rounded-3xl
                         p-8 md:p-12
                         flex flex-col md:flex-row
-                        justify-between items-start md:items-center
+                        justify-between
+                        items-start md:items-center
                         gap-8">
+
 
                 <div class="max-w-2xl">
 
-                    <p class="text-purple-400 font-medium mb-3">
+                    <p class="text-purple-400
+                              font-medium
+                              mb-3">
+
                         GELİŞTİRME SÜRECİ
+
                     </p>
 
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+
+                    <h2 class="text-3xl md:text-4xl
+                               font-bold
+                               mb-4">
+
                         Projelerin arkasındaki süreci merak ediyor musun?
+
                     </h2>
 
+
                     <p class="text-zinc-400 leading-relaxed">
+
                         Karşılaştığım problemleri, öğrendiğim teknolojileri
                         ve proje geliştirme deneyimlerimi blog yazılarımda
                         paylaşıyorum.
+
                     </p>
 
                 </div>
@@ -251,6 +328,7 @@
 
                 </a>
 
+
             </div>
 
         </section>
@@ -260,12 +338,22 @@
 
 
 
+    <!-- ========================= -->
     <!-- FOOTER -->
-    <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
+    <!-- ========================= -->
 
-        <div class="max-w-6xl mx-auto px-6
+    <footer class="border-t border-zinc-800
+                   bg-zinc-950
+                   py-12">
+
+        <div class="max-w-6xl
+                    mx-auto
+                    px-6
                     flex flex-col md:flex-row
-                    justify-between items-center gap-6">
+                    justify-between
+                    items-center
+                    gap-6">
+
 
             <div>
 
@@ -280,31 +368,63 @@
             </div>
 
 
-            <div class="flex items-center gap-6 text-zinc-400">
 
+            <div class="flex
+                        flex-wrap
+                        justify-center
+                        items-center
+                        gap-6
+                        text-zinc-400">
+
+
+                <!-- GitHub -->
                 <a href="https://github.com/frknylcn"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-purple-400 transition">
+
                     GitHub
+
                 </a>
+
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 transition">
+
+                    LinkedIn
+
+                </a>
+
 
                 <a href="/projects.html"
                    class="hover:text-purple-400 transition">
+
                     Projeler
+
                 </a>
+
 
                 <a href="/contact.html"
                    class="hover:text-purple-400 transition">
+
                     İletişim
+
                 </a>
+
 
             </div>
 
 
+
             <p class="text-zinc-600 text-sm">
+
                 © 2026 Furkan Yalçın
+
             </p>
+
 
         </div>
 
@@ -312,17 +432,30 @@
 
 
 
+    <!-- ========================= -->
     <!-- BACK TO TOP -->
+    <!-- ========================= -->
+
     <button id="back-to-top"
             aria-label="Sayfanın başına dön">
+
         ↑
+
     </button>
 
 
 
+    <!-- ========================= -->
     <!-- PROJE VERİLERİ -->
+    <!-- ========================= -->
+
     <script src="/js/main.js"></script>
 
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
 
     <script>
 
@@ -330,8 +463,16 @@
         const menuBtn = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
+
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            menuBtn.setAttribute(
+                'aria-expanded',
+                String(!isHidden)
+            );
+
         });
 
 
@@ -339,15 +480,21 @@
         // Yukarı Çık Butonu
         const backToTop = document.getElementById('back-to-top');
 
+
         window.addEventListener('scroll', () => {
 
             if (window.scrollY > 400) {
+
                 backToTop.style.display = 'flex';
+
             } else {
+
                 backToTop.style.display = 'none';
+
             }
 
         });
+
 
 
         backToTop.addEventListener('click', () => {
