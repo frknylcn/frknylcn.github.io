@@ -28,6 +28,9 @@
     <meta property="og:type"
           content="profile">
 
+    <meta property="og:site_name"
+          content="Furkan Yalçın">
+
     <meta property="og:url"
           content="https://frknylcn.github.io/about.html">
 
@@ -52,6 +55,11 @@
           content="https://frknylcn.github.io/images/projects/portfolio.jpeg">
 
 
+    <!-- Tema -->
+    <meta name="theme-color"
+          content="#09090b">
+
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -63,11 +71,12 @@
 
     <!-- Favicon -->
     <link rel="icon"
-          href="/assets/images/favicon.png"
-          type="image/png">
+          type="image/png"
+          sizes="192x192"
+          href="/favicon.png">
 
     <link rel="apple-touch-icon"
-          href="/assets/images/favicon.png">
+          href="/favicon.png">
 
 
     <!-- ProfilePage / Person Structured Data -->
@@ -86,7 +95,8 @@
             "description": "Yalova Üniversitesi Bilgisayar Mühendisliği öğrencisi. Yazılım, oyun, mobil uygulama ve web projeleri geliştiriyor.",
             "jobTitle": "Bilgisayar Mühendisliği Öğrencisi",
             "sameAs": [
-                "https://github.com/frknylcn"
+                "https://github.com/frknylcn",
+                "https://www.linkedin.com/in/frknylcn"
             ]
         }
     }
@@ -105,7 +115,9 @@
 
             <a href="/"
                class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+
                 Karanlık<span class="text-purple-500">Yol</span>
+
             </a>
 
 
@@ -128,6 +140,7 @@
                 </a>
 
                 <a href="/about.html"
+                   aria-current="page"
                    class="text-purple-400 font-medium">
                     Hakkımda
                 </a>
@@ -143,8 +156,11 @@
             <!-- Mobil Hamburger -->
             <button id="menu-button"
                     class="md:hidden text-4xl focus:outline-none"
-                    aria-label="Menüyü aç">
+                    aria-label="Menüyü aç"
+                    aria-expanded="false">
+
                 ☰
+
             </button>
 
         </div>
@@ -172,6 +188,7 @@
                 </a>
 
                 <a href="/about.html"
+                   aria-current="page"
                    class="text-purple-400">
                     Hakkımda
                 </a>
@@ -205,8 +222,10 @@
             </h1>
 
             <p class="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed">
+
                 Yazılım geliştirerek, projeler üreterek ve yeni teknolojiler
                 öğrenerek kendimi sürekli geliştirmeye çalışıyorum.
+
             </p>
 
         </section>
@@ -219,6 +238,7 @@
             <h2 class="text-3xl font-semibold mb-6 text-purple-400">
                 Merhaba, ben Furkan 👋
             </h2>
+
 
             <div class="space-y-6 text-zinc-300 text-lg leading-relaxed">
 
@@ -254,12 +274,94 @@
 
 
 
+        <!-- PROFİLLER -->
+        <section class="mb-20">
+
+            <h2 class="text-3xl font-semibold mb-10 text-purple-400">
+                Profesyonel Profillerim
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+                <!-- GitHub -->
+                <a href="https://github.com/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-zinc-900
+                          border border-zinc-800
+                          hover:border-purple-500
+                          rounded-3xl
+                          p-7
+                          transition
+                          group">
+
+                    <p class="text-purple-400 text-sm font-medium mb-3">
+                        GITHUB
+                    </p>
+
+                    <h3 class="text-2xl font-semibold mb-3">
+                        github.com/frknylcn
+                    </h3>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Projelerimi, kaynak kodlarımı ve geliştirme çalışmalarımı
+                        GitHub profilimde inceleyebilirsin.
+                    </p>
+
+                    <p class="text-purple-400 mt-5 group-hover:text-purple-300">
+                        Profili görüntüle →
+                    </p>
+
+                </a>
+
+
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-zinc-900
+                          border border-zinc-800
+                          hover:border-purple-500
+                          rounded-3xl
+                          p-7
+                          transition
+                          group">
+
+                    <p class="text-purple-400 text-sm font-medium mb-3">
+                        LINKEDIN
+                    </p>
+
+                    <h3 class="text-2xl font-semibold mb-3">
+                        linkedin.com/in/frknylcn
+                    </h3>
+
+                    <p class="text-zinc-400 leading-relaxed">
+                        Eğitim, projeler, yetenekler ve yazılım geliştirme
+                        yolculuğum hakkında LinkedIn profilimi inceleyebilirsin.
+                    </p>
+
+                    <p class="text-purple-400 mt-5 group-hover:text-purple-300">
+                        Profili görüntüle →
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
         <!-- ÇALIŞTIĞIM ALANLAR -->
         <section class="mb-20">
 
             <h2 class="text-3xl font-semibold mb-10 text-purple-400">
                 Şu Anda Üzerinde Çalıştığım Alanlar
             </h2>
+
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -278,6 +380,7 @@
                 </div>
 
 
+
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
 
                     <h3 class="text-xl font-semibold mb-2">
@@ -289,6 +392,7 @@
                     </p>
 
                 </div>
+
 
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
@@ -305,6 +409,7 @@
                 </div>
 
 
+
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-purple-500 transition">
 
                     <h3 class="text-xl font-semibold mb-2">
@@ -317,6 +422,7 @@
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -331,8 +437,8 @@
                 Teknolojiler ve Becerilerim
             </h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center hover:border-purple-500 hover:-translate-y-1 transition">
                     <p class="text-xl font-medium">Java</p>
@@ -398,11 +504,13 @@
                 </h2>
 
                 <p class="text-zinc-300 text-lg leading-relaxed">
+
                     Bir teknolojiyi öğrenirken yalnızca ders veya dokümantasyon
                     takip etmek yerine öğrendiklerimi küçük projelerde kullanmaya
                     çalışıyorum. Karşılaştığım problemlerin nedenlerini araştırarak
                     ve çözerek ilerlemenin yazılım öğrenmenin en etkili yollarından
                     biri olduğuna inanıyorum.
+
                 </p>
 
             </div>
@@ -417,6 +525,7 @@
             <h2 class="text-3xl font-semibold mb-10 text-purple-400">
                 Eğitim
             </h2>
+
 
             <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
@@ -442,9 +551,11 @@
                         </p>
 
                         <p class="text-zinc-500 mt-4 leading-relaxed">
+
                             Üniversite eğitimimin yanında yazılım geliştirme,
                             algoritmalar, web teknolojileri ve oyun geliştirme
                             alanlarında kişisel projeler geliştiriyorum.
+
                         </p>
 
                     </div>
@@ -460,18 +571,23 @@
         <!-- HEDEF -->
         <section>
 
-            <div class="border border-purple-500/30 bg-purple-500/5 rounded-3xl p-8 md:p-10">
+            <div class="border border-purple-500/30
+                        bg-purple-500/5
+                        rounded-3xl
+                        p-8 md:p-10">
 
                 <h2 class="text-3xl font-semibold mb-6 text-purple-400">
                     Hedefim
                 </h2>
 
                 <p class="text-zinc-300 text-lg leading-relaxed">
+
                     Üniversite boyunca yazılım bilgimi ve proje deneyimimi
                     geliştirmek, gerçek dünya projelerinde görev almak ve
                     profesyonel yazılım geliştirme süreçlerini öğrenmek istiyorum.
                     Uzun vadede güçlü teknik bilgiye sahip bir yazılım geliştirici
                     olmayı hedefliyorum.
+
                 </p>
 
             </div>
@@ -486,7 +602,10 @@
     <!-- FOOTER -->
     <footer class="border-t border-zinc-800 bg-zinc-950 py-12">
 
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-6xl mx-auto px-6
+                    flex flex-col md:flex-row
+                    justify-between items-center gap-6">
+
 
             <div>
 
@@ -501,31 +620,59 @@
             </div>
 
 
-            <div class="flex items-center gap-6 text-zinc-400">
+
+            <div class="flex
+                        flex-wrap
+                        justify-center
+                        items-center
+                        gap-6
+                        text-zinc-400">
+
 
                 <a href="https://github.com/frknylcn"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-purple-400 transition">
+
                     GitHub
+
                 </a>
+
+
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 transition">
+
+                    LinkedIn
+
+                </a>
+
 
                 <a href="/projects.html"
                    class="hover:text-purple-400 transition">
+
                     Projeler
+
                 </a>
+
 
                 <a href="/contact.html"
                    class="hover:text-purple-400 transition">
+
                     İletişim
+
                 </a>
 
+
             </div>
+
 
 
             <p class="text-zinc-600 text-sm">
                 © 2026 Furkan Yalçın
             </p>
+
 
         </div>
 
@@ -536,8 +683,20 @@
     <!-- BACK TO TOP -->
     <button id="back-to-top"
             aria-label="Sayfanın başına dön"
-            class="hidden fixed bottom-8 right-8 w-12 h-12 bg-purple-600 hover:bg-purple-700 rounded-full items-center justify-center text-xl shadow-lg transition">
+            class="hidden fixed
+                   bottom-8 right-8
+                   w-12 h-12
+                   bg-purple-600
+                   hover:bg-purple-700
+                   rounded-full
+                   items-center
+                   justify-center
+                   text-xl
+                   shadow-lg
+                   transition">
+
         ↑
+
     </button>
 
 
@@ -548,13 +707,23 @@
         const menuBtn = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
+
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            menuBtn.setAttribute(
+                'aria-expanded',
+                String(!isHidden)
+            );
+
         });
+
 
 
         // Yukarı Çık Butonu
         const backToTop = document.getElementById('back-to-top');
+
 
         window.addEventListener('scroll', () => {
 
@@ -571,6 +740,7 @@
             }
 
         });
+
 
 
         backToTop.addEventListener('click', () => {
