@@ -118,109 +118,276 @@
 
 
     <!-- ========================= -->
-    <!-- NAVIGATION -->
-    <!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
 
-    <nav class="border-b border-zinc-800/80
-                bg-zinc-950/90
-                backdrop-blur-xl
-                sticky top-0 z-50">
+<nav class="border-b border-zinc-800/80
+            bg-zinc-950/90
+            backdrop-blur-xl
+            sticky top-0 z-50">
 
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto
+                px-6 py-5
+                flex justify-between items-center">
 
-            <!-- Logo -->
+        <!-- Logo -->
+        <a href="/"
+           class="text-2xl md:text-3xl
+                  font-bold tracking-tight
+                  hover:text-purple-400
+                  transition">
+
+            Karanlık<span class="text-purple-500">Yol</span>
+
+        </a>
+
+
+        <!-- Desktop Menü -->
+        <div class="hidden md:flex items-center space-x-8 text-base">
+
             <a href="/"
-               class="text-2xl md:text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+               aria-current="page"
+               class="text-purple-400 font-medium">
+                Ana Sayfa
+            </a>
 
-                Karanlık<span class="text-purple-500">Yol</span>
+            <a href="/projects.html"
+               class="text-zinc-300 hover:text-purple-400 transition">
+                Projeler
+            </a>
+
+            <a href="/blog.html"
+               class="text-zinc-300 hover:text-purple-400 transition">
+                Blog
+            </a>
+
+            <a href="/about.html"
+               class="text-zinc-300 hover:text-purple-400 transition">
+                Hakkımda
+            </a>
+
+            <a href="/contact.html"
+               class="bg-purple-600
+                      hover:bg-purple-700
+                      px-5 py-3
+                      rounded-xl
+                      font-medium
+                      transition">
+                İletişim
+            </a>
+
+        </div>
+
+
+        <!-- Mobil Menü Butonu -->
+        <button
+            id="menu-button"
+            class="md:hidden
+                   w-12 h-12
+                   flex items-center justify-center
+                   rounded-xl
+                   border border-zinc-800
+                   text-2xl
+                   hover:border-purple-500
+                   transition"
+            aria-label="Menüyü aç"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- Mobil Menü Arka Planı -->
+<div
+    id="menu-backdrop"
+    class="hidden md:hidden
+           fixed inset-0
+           bg-black/60
+           backdrop-blur-sm
+           z-[60]">
+</div>
+
+
+<!-- Sağdan Açılan Mobil Menü -->
+<aside
+    id="mobile-menu"
+    aria-hidden="true"
+    class="md:hidden
+           fixed top-0 right-0
+           h-dvh
+           w-[82%]
+           max-w-sm
+           bg-zinc-950
+           border-l border-zinc-800
+           z-[70]
+           translate-x-full
+           transition-transform
+           duration-300
+           ease-out">
+
+
+    <!-- Menü Üstü -->
+    <div class="flex justify-between items-center
+                px-6 py-6
+                border-b border-zinc-800">
+
+        <p class="text-xl font-semibold">
+            Menü
+        </p>
+
+        <button
+            id="menu-close"
+            class="w-11 h-11
+                   flex items-center justify-center
+                   rounded-xl
+                   border border-zinc-800
+                   text-2xl
+                   hover:border-purple-500
+                   transition"
+            aria-label="Menüyü kapat">
+
+            ×
+
+        </button>
+
+    </div>
+
+
+    <!-- Menü Linkleri -->
+    <div class="px-6 py-8">
+
+        <nav class="flex flex-col gap-3">
+
+            <a href="/"
+               class="mobile-menu-link
+                      bg-purple-500/10
+                      text-purple-400
+                      border border-purple-500/20
+                      rounded-2xl
+                      px-5 py-4
+                      text-lg
+                      font-medium">
+
+                Ana Sayfa
 
             </a>
 
 
-            <!-- Desktop Menü -->
-            <div class="hidden md:flex items-center space-x-8 text-base">
+            <a href="/projects.html"
+               class="mobile-menu-link
+                      text-zinc-300
+                      hover:text-purple-400
+                      hover:bg-zinc-900
+                      rounded-2xl
+                      px-5 py-4
+                      text-lg
+                      transition">
 
-                <a href="/"
-                   aria-current="page"
-                   class="text-purple-400 font-medium">
-                    Ana Sayfa
+                Projeler
+
+            </a>
+
+
+            <a href="/blog.html"
+               class="mobile-menu-link
+                      text-zinc-300
+                      hover:text-purple-400
+                      hover:bg-zinc-900
+                      rounded-2xl
+                      px-5 py-4
+                      text-lg
+                      transition">
+
+                Blog
+
+            </a>
+
+
+            <a href="/about.html"
+               class="mobile-menu-link
+                      text-zinc-300
+                      hover:text-purple-400
+                      hover:bg-zinc-900
+                      rounded-2xl
+                      px-5 py-4
+                      text-lg
+                      transition">
+
+                Hakkımda
+
+            </a>
+
+
+            <a href="/contact.html"
+               class="mobile-menu-link
+                      text-zinc-300
+                      hover:text-purple-400
+                      hover:bg-zinc-900
+                      rounded-2xl
+                      px-5 py-4
+                      text-lg
+                      transition">
+
+                İletişim
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sosyal Hesaplar -->
+        <div class="border-t border-zinc-800 mt-8 pt-8">
+
+            <p class="text-zinc-500 text-sm mb-4">
+                PROFİLLER
+            </p>
+
+            <div class="grid grid-cols-2 gap-3">
+
+                <a href="https://github.com/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-zinc-800
+                          hover:border-purple-500
+                          rounded-xl
+                          px-4 py-3
+                          text-center
+                          text-zinc-300
+                          transition">
+
+                    GitHub ↗
+
                 </a>
 
-                <a href="/projects.html"
-                   class="text-zinc-300 hover:text-purple-400 transition">
-                    Projeler
-                </a>
 
-                <a href="/blog.html"
-                   class="text-zinc-300 hover:text-purple-400 transition">
-                    Blog
-                </a>
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-zinc-800
+                          hover:border-purple-500
+                          rounded-xl
+                          px-4 py-3
+                          text-center
+                          text-zinc-300
+                          transition">
 
-                <a href="/about.html"
-                   class="text-zinc-300 hover:text-purple-400 transition">
-                    Hakkımda
-                </a>
+                    LinkedIn ↗
 
-                <a href="/contact.html"
-                   class="bg-purple-600 hover:bg-purple-700 px-5 py-3 rounded-xl font-medium transition">
-                    İletişim
                 </a>
 
             </div>
 
-
-            <!-- Mobil Hamburger -->
-            <button
-                id="menu-button"
-                class="md:hidden text-3xl focus:outline-none"
-                aria-label="Menüyü aç"
-                aria-expanded="false">
-
-                ☰
-
-            </button>
-
         </div>
 
+    </div>
 
-        <!-- Mobil Menü -->
-        <div
-            id="mobile-menu"
-            class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
-
-            <div class="flex flex-col space-y-6 px-6 text-lg">
-
-                <a href="/"
-                   aria-current="page"
-                   class="text-purple-400">
-                    Ana Sayfa
-                </a>
-
-                <a href="/projects.html"
-                   class="hover:text-purple-400">
-                    Projeler
-                </a>
-
-                <a href="/blog.html"
-                   class="hover:text-purple-400">
-                    Blog
-                </a>
-
-                <a href="/about.html"
-                   class="hover:text-purple-400">
-                    Hakkımda
-                </a>
-
-                <a href="/contact.html"
-                   class="hover:text-purple-400">
-                    İletişim
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
+</aside>
 
 
 
@@ -1102,99 +1269,166 @@
     <!-- JAVASCRIPT -->
     <!-- ========================= -->
 
-    <script>
+   <script>
 
-        // Mobil Menü
-        const menuBtn = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    // =========================
+    // MOBİL MENÜ
+    // =========================
 
-        menuBtn.addEventListener('click', () => {
-
-            const isHidden = mobileMenu.classList.toggle('hidden');
-
-            menuBtn.setAttribute(
-                'aria-expanded',
-                String(!isHidden)
-            );
-
-        });
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('menu-backdrop');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
 
+    function openMobileMenu() {
 
-        // Yukarı Çık Butonu
-        const backToTop = document.getElementById('back-to-top');
+        mobileMenu.classList.remove('translate-x-full');
+        menuBackdrop.classList.remove('hidden');
 
-        window.addEventListener('scroll', () => {
+        menuBtn.setAttribute('aria-expanded', 'true');
+        mobileMenu.setAttribute('aria-hidden', 'false');
 
-            if (window.scrollY > 500) {
+        // Menü açıkken arkadaki sayfa kaymasın
+        document.body.style.overflow = 'hidden';
 
-                backToTop.classList.remove('hidden');
-                backToTop.classList.add('flex');
-
-            } else {
-
-                backToTop.classList.add('hidden');
-                backToTop.classList.remove('flex');
-
-            }
-
-        });
+    }
 
 
+    function closeMobileMenu() {
 
-        backToTop.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+        menuBackdrop.classList.add('hidden');
 
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
 
-        });
+        document.body.style.overflow = '';
 
-
-
-        // Scroll Reveal
-        const revealElements = document.querySelectorAll('.reveal');
-
-        if ('IntersectionObserver' in window) {
-
-            const revealObserver = new IntersectionObserver(
-
-                (entries) => {
-
-                    entries.forEach((entry) => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add('active');
-                            revealObserver.unobserve(entry.target);
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    threshold: 0.12
-                }
-
-            );
+    }
 
 
-            revealElements.forEach((element) => {
-                revealObserver.observe(element);
-            });
+    // Hamburger butonu
+    menuBtn.addEventListener('click', openMobileMenu);
 
-        } else {
 
-            revealElements.forEach((element) => {
-                element.classList.add('active');
-            });
+    // X butonu
+    menuClose.addEventListener('click', closeMobileMenu);
+
+
+    // Karanlık arka plana basınca kapat
+    menuBackdrop.addEventListener('click', closeMobileMenu);
+
+
+    // Menüdeki bir bağlantıya basınca kapat
+    mobileMenuLinks.forEach((link) => {
+
+        link.addEventListener('click', closeMobileMenu);
+
+    });
+
+
+    // ESC tuşuna basınca kapat
+    document.addEventListener('keydown', (event) => {
+
+        if (event.key === 'Escape') {
+
+            closeMobileMenu();
 
         }
 
-    </script>
+    });
+
+
+
+    // =========================
+    // YUKARI ÇIK BUTONU
+    // =========================
+
+    const backToTop = document.getElementById('back-to-top');
+
+
+    window.addEventListener('scroll', () => {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.remove('hidden');
+            backToTop.classList.add('flex');
+
+        } else {
+
+            backToTop.classList.add('hidden');
+            backToTop.classList.remove('flex');
+
+        }
+
+    });
+
+
+
+    backToTop.addEventListener('click', () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    });
+
+
+
+    // =========================
+    // SCROLL REVEAL
+    // =========================
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+
+    if ('IntersectionObserver' in window) {
+
+        const revealObserver = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+        revealElements.forEach((element) => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+    } else {
+
+        revealElements.forEach((element) => {
+
+            element.classList.add('active');
+
+        });
+
+    }
+
+</script>
 
 
 </body>
