@@ -539,198 +539,428 @@
                         relative z-10
                         w-full">
 
-                <div class="max-w-4xl">
+                <div class="grid
+                            grid-cols-1
+                            lg:grid-cols-[minmax(0,1.45fr)_minmax(300px,0.75fr)]
+                            gap-10 lg:gap-14
+                            items-center">
 
 
-                    <!-- Badge -->
-                    <div class="inline-flex
-                                items-center
-                                gap-3
-                                bg-zinc-900/80
-                                border border-zinc-800
-                                rounded-full
-                                px-4 md:px-5
-                                py-2.5 md:py-3
-                                mb-6 md:mb-8">
+                    <!-- Left: Main Intro -->
+                    <div class="max-w-4xl">
 
-                        <span class="relative flex
-                                     h-3 w-3
-                                     flex-shrink-0">
 
-                            <span class="animate-ping
-                                         absolute inline-flex
-                                         h-full w-full
-                                         rounded-full
-                                         bg-purple-400
-                                         opacity-75">
-                            </span>
+                        <!-- Badge -->
+                        <div class="inline-flex
+                                    items-center
+                                    gap-3
+                                    bg-zinc-900/80
+                                    border border-zinc-800
+                                    rounded-full
+                                    px-4 md:px-5
+                                    py-2.5 md:py-3
+                                    mb-6 md:mb-8">
 
-                            <span class="relative inline-flex
-                                         rounded-full
+                            <span class="relative flex
                                          h-3 w-3
-                                         bg-purple-500">
+                                         flex-shrink-0">
+
+                                <span class="animate-ping
+                                             absolute inline-flex
+                                             h-full w-full
+                                             rounded-full
+                                             bg-purple-400
+                                             opacity-75">
+                                </span>
+
+                                <span class="relative inline-flex
+                                             rounded-full
+                                             h-3 w-3
+                                             bg-purple-500">
+                                </span>
+
                             </span>
 
-                        </span>
 
-                        <span class="text-xs sm:text-sm
-                                     text-zinc-300
-                                     tracking-wide">
+                            <span class="text-xs sm:text-sm
+                                         text-zinc-300
+                                         tracking-wide">
 
-                            COMPUTER ENGINEERING STUDENT
+                                COMPUTER ENGINEERING STUDENT
 
-                        </span>
-
-                    </div>
-
-
-
-                    <!-- Name -->
-                    <h1 class="text-4xl
-                               sm:text-6xl
-                               md:text-8xl
-                               font-bold
-                               tracking-tight
-                               leading-[1.05]
-                               mb-5 md:mb-8">
-
-                        Furkan
-
-                        <span class="text-transparent
-                                     bg-clip-text
-                                     bg-gradient-to-r
-                                     from-purple-400
-                                     via-purple-500
-                                     to-fuchsia-500">
-
-                            Yalçın
-
-                        </span>
-
-                    </h1>
-
-
-
-                    <p class="text-base sm:text-lg md:text-2xl
-                              text-zinc-400
-                              max-w-3xl
-                              leading-relaxed
-                              mb-3 md:mb-5">
-
-                        I am a Computer Engineering student at Yalova University,
-                        building software, mobile applications and game projects.
-
-                    </p>
-
-
-
-                    <p class="text-sm sm:text-base md:text-lg
-                              text-zinc-500
-                              max-w-2xl
-                              leading-relaxed
-                              mb-7 md:mb-10">
-
-                        I turn ideas into working projects using Godot, Java,
-                        JavaScript and modern web technologies while continuously
-                        improving my software development skills.
-
-                    </p>
-
-
-
-                    <!-- Main Buttons -->
-                    <div class="grid
-                                grid-cols-1
-                                sm:grid-cols-2
-                                gap-3 sm:gap-4
-                                max-w-2xl">
-
-                        <a href="/en/projects.html"
-                           class="group
-                                  bg-purple-600
-                                  hover:bg-purple-700
-                                  px-6 md:px-8
-                                  py-4
-                                  rounded-2xl
-                                  text-base md:text-lg
-                                  font-semibold
-                                  transition
-                                  flex
-                                  items-center
-                                  justify-center
-                                  gap-3">
-
-                            Explore My Projects
-
-                            <span class="group-hover:translate-x-1 transition">
-                                →
                             </span>
 
-                        </a>
+                        </div>
 
 
-                        <a href="/en/contact.html"
-                           class="border border-zinc-700
-                                  hover:border-purple-500
-                                  bg-zinc-900/40
-                                  hover:bg-zinc-900
-                                  px-6 md:px-8
-                                  py-4
-                                  rounded-2xl
-                                  text-base md:text-lg
-                                  font-medium
-                                  transition
-                                  text-center">
 
-                            Get in Touch
+                        <!-- Name -->
+                        <h1 class="text-4xl
+                                   sm:text-6xl
+                                   md:text-8xl
+                                   font-bold
+                                   tracking-tight
+                                   leading-[1.05]
+                                   mb-5 md:mb-8">
 
-                        </a>
+                            Furkan
+
+                            <span class="text-transparent
+                                         bg-clip-text
+                                         bg-gradient-to-r
+                                         from-purple-400
+                                         via-purple-500
+                                         to-fuchsia-500">
+
+                                Yalçın
+
+                            </span>
+
+                        </h1>
+
+
+
+                        <!-- Main Description -->
+                        <p class="text-base sm:text-lg md:text-2xl
+                                  text-zinc-400
+                                  max-w-3xl
+                                  leading-relaxed
+                                  mb-3 md:mb-5">
+
+                            I am a Computer Engineering student at Yalova University,
+                            building software, mobile applications and game projects.
+
+                        </p>
+
+
+
+                        <!-- Secondary Description -->
+                        <p class="text-sm sm:text-base md:text-lg
+                                  text-zinc-500
+                                  max-w-2xl
+                                  leading-relaxed
+                                  mb-7 md:mb-10">
+
+                            I turn ideas into working projects using Godot, Java,
+                            JavaScript and modern web technologies while continuously
+                            improving my software development skills.
+
+                        </p>
+
+
+
+                        <!-- Main Buttons -->
+                        <div class="grid
+                                    grid-cols-1
+                                    sm:grid-cols-2
+                                    gap-3 sm:gap-4
+                                    max-w-2xl">
+
+                            <a href="/en/projects.html"
+                               class="group
+                                      bg-purple-600
+                                      hover:bg-purple-700
+                                      px-6 md:px-8
+                                      py-4
+                                      rounded-2xl
+                                      text-base md:text-lg
+                                      font-semibold
+                                      transition
+                                      flex
+                                      items-center
+                                      justify-center
+                                      gap-3">
+
+                                Explore My Projects
+
+                                <span class="group-hover:translate-x-1 transition">
+                                    →
+                                </span>
+
+                            </a>
+
+
+                            <a href="/en/contact.html"
+                               class="border border-zinc-700
+                                      hover:border-purple-500
+                                      bg-zinc-900/40
+                                      hover:bg-zinc-900
+                                      px-6 md:px-8
+                                      py-4
+                                      rounded-2xl
+                                      text-base md:text-lg
+                                      font-medium
+                                      transition
+                                      text-center">
+
+                                Get in Touch
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Social -->
+                        <div class="grid
+                                    grid-cols-2
+                                    gap-4
+                                    max-w-md
+                                    mt-4">
+
+                            <a href="https://github.com/frknylcn"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="border border-zinc-800
+                                      hover:border-purple-500
+                                      hover:text-purple-400
+                                      px-5 py-4
+                                      rounded-2xl
+                                      text-zinc-300
+                                      transition
+                                      text-center">
+
+                                GitHub ↗
+
+                            </a>
+
+
+                            <a href="https://www.linkedin.com/in/frknylcn"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="border border-zinc-800
+                                      hover:border-purple-500
+                                      hover:text-purple-400
+                                      px-5 py-4
+                                      rounded-2xl
+                                      text-zinc-300
+                                      transition
+                                      text-center">
+
+                                LinkedIn ↗
+
+                            </a>
+
+                        </div>
 
                     </div>
 
 
 
-                    <!-- Social -->
-                    <div class="grid
-                                grid-cols-2
-                                gap-4
-                                max-w-md
-                                mt-4">
+                    <!-- Right: Currently Card -->
+                    <aside
+                        aria-label="What I'm currently working on"
+                        class="relative
+                               overflow-hidden
+                               w-full
+                               max-w-xl
+                               lg:max-w-none
+                               lg:ml-auto
+                               bg-zinc-900/75
+                               border border-zinc-800
+                               rounded-3xl
+                               p-5 sm:p-6 lg:p-7
+                               shadow-2xl
+                               shadow-black/20">
 
-                        <a href="https://github.com/frknylcn"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="border border-zinc-800
-                                  hover:border-purple-500
-                                  hover:text-purple-400
-                                  px-5 py-4
-                                  rounded-2xl
-                                  text-zinc-300
-                                  transition
-                                  text-center">
-
-                            GitHub ↗
-
-                        </a>
+                        <div class="absolute
+                                    -top-20 -right-20
+                                    w-48 h-48
+                                    bg-purple-600/15
+                                    rounded-full
+                                    blur-3xl
+                                    pointer-events-none">
+                        </div>
 
 
-                        <a href="https://www.linkedin.com/in/frknylcn"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="border border-zinc-800
-                                  hover:border-purple-500
-                                  hover:text-purple-400
-                                  px-5 py-4
-                                  rounded-2xl
-                                  text-zinc-300
-                                  transition
-                                  text-center">
+                        <div class="relative z-10">
 
-                            LinkedIn ↗
+                            <div class="flex
+                                        items-center
+                                        justify-between
+                                        gap-4
+                                        mb-2">
 
-                        </a>
+                                <p class="text-purple-400
+                                          text-xs
+                                          font-semibold
+                                          tracking-[0.18em]">
 
-                    </div>
+                                    CURRENTLY
+
+                                </p>
+
+                                <span class="relative flex h-2.5 w-2.5">
+
+                                    <span class="animate-ping
+                                                 absolute inline-flex
+                                                 h-full w-full
+                                                 rounded-full
+                                                 bg-purple-400
+                                                 opacity-60">
+                                    </span>
+
+                                    <span class="relative inline-flex
+                                                 h-2.5 w-2.5
+                                                 rounded-full
+                                                 bg-purple-500">
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <h2 class="text-2xl
+                                       sm:text-3xl
+                                       font-semibold
+                                       tracking-tight
+                                       mb-2">
+
+                                What I'm working on
+
+                            </h2>
+
+
+                            <p class="text-zinc-500
+                                      text-sm
+                                      leading-relaxed
+                                      mb-6">
+
+                                The areas I'm currently learning,
+                                building and practicing.
+
+                            </p>
+
+
+
+                            <div class="space-y-3">
+
+
+                                <div class="flex
+                                            items-start
+                                            gap-4
+                                            bg-zinc-950/70
+                                            border border-zinc-800
+                                            hover:border-purple-500/50
+                                            rounded-2xl
+                                            p-4
+                                            transition">
+
+                                    <div class="w-11 h-11
+                                                flex-shrink-0
+                                                rounded-xl
+                                                bg-purple-500/10
+                                                border border-purple-500/20
+                                                flex items-center
+                                                justify-center
+                                                text-xl">
+
+                                        ☕
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3 class="font-semibold text-zinc-100 mb-1">
+                                            Java &amp; Data Structures
+                                        </h3>
+
+                                        <p class="text-zinc-500 text-sm leading-relaxed">
+                                            Learning the fundamentals and practicing regularly.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="flex
+                                            items-start
+                                            gap-4
+                                            bg-zinc-950/70
+                                            border border-zinc-800
+                                            hover:border-purple-500/50
+                                            rounded-2xl
+                                            p-4
+                                            transition">
+
+                                    <div class="w-11 h-11
+                                                flex-shrink-0
+                                                rounded-xl
+                                                bg-purple-500/10
+                                                border border-purple-500/20
+                                                flex items-center
+                                                justify-center
+                                                text-xl">
+
+                                        🎮
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3 class="font-semibold text-zinc-100 mb-1">
+                                            Karanlık Madenci
+                                        </h3>
+
+                                        <p class="text-zinc-500 text-sm leading-relaxed">
+                                            Continuing to develop my game project with Godot.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="flex
+                                            items-start
+                                            gap-4
+                                            bg-zinc-950/70
+                                            border border-zinc-800
+                                            hover:border-purple-500/50
+                                            rounded-2xl
+                                            p-4
+                                            transition">
+
+                                    <div class="w-11 h-11
+                                                flex-shrink-0
+                                                rounded-xl
+                                                bg-purple-500/10
+                                                border border-purple-500/20
+                                                flex items-center
+                                                justify-center
+                                                text-xl">
+
+                                        📱
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3 class="font-semibold text-zinc-100 mb-1">
+                                            Android Projects
+                                        </h3>
+
+                                        <p class="text-zinc-500 text-sm leading-relaxed">
+                                            Building experience with mobile application development.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </aside>
 
 
                 </div>
