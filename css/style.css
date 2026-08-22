@@ -630,6 +630,39 @@ footer a:hover {
     padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
+
+
+/* =====================================================
+   MOBILE HEADER COMPACT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Üst navigasyonu mobilde biraz daha kompakt yap */
+    body > nav > div {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    /* Hamburger butonunu biraz küçült */
+    #menu-button {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* Açılan menünün üst kısmını da sıkılaştır */
+    #mobile-menu > div:first-child {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    /* Menü içeriğini biraz daha yukarı al */
+    #mobile-menu > div:last-child {
+        padding-top: 1.5rem !important;
+    }
+}
+
 /* =====================================================
    RESPONSIVE
 ===================================================== */
