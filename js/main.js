@@ -10,7 +10,11 @@ const projects = [
         description:
             "Godot ile geliştirdiğim 2D madencilik oyunu. Oyuncu madenleri keşfediyor, değerli kaynaklar topluyor, ekipmanlarını geliştiriyor ve farklı özelliklerin kilidini açıyor.",
 
-        tech: "Godot • GDScript • Android",
+        tech: [
+            "Godot",
+            "GDScript",
+            "Android"
+        ],
 
         image: "/images/projects/karanlik-madenci.jpg",
 
@@ -26,7 +30,12 @@ const projects = [
         description:
             "Kullanıcının elindeki malzemeleri seçerek yapabileceği yemekleri bulmasına yardımcı olan mobil tarif uygulaması. Yüzlerce Türk yemeği, tatlı, içecek ve atıştırmalık içeriyor.",
 
-        tech: "JavaScript • Vite • Capacitor • Android",
+        tech: [
+            "JavaScript",
+            "Vite",
+            "Capacitor",
+            "Android"
+        ],
 
         image: "/images/projects/dolapta-ne-var.jpeg",
 
@@ -42,7 +51,10 @@ const projects = [
         description:
             "Godot ile geliştirdiğim 2D strateji oyunu. Oyuncular asker üreterek kendi kalelerini korurken rakip kaleyi yok etmeye çalışıyor.",
 
-        tech: "Godot • GDScript",
+        tech: [
+            "Godot",
+            "GDScript"
+        ],
 
         image: "/images/projects/haspet-defense.jpg",
 
@@ -58,7 +70,11 @@ const projects = [
         description:
             "Projelerimi, yazılım çalışmalarımı ve geliştirme sürecimi sergilemek için hazırladığım responsive kişisel portfolio web sitesi.",
 
-        tech: "HTML • Tailwind CSS • JavaScript",
+        tech: [
+            "HTML",
+            "Tailwind CSS",
+            "JavaScript"
+        ],
 
         image: "/images/projects/portfolio.jpeg",
 
@@ -80,45 +96,135 @@ const container = document.getElementById("projects-container");
 
 if (container) {
 
-    projects.forEach(project => {
+    projects.forEach((project) => {
 
         const card = document.createElement("article");
 
 
-        card.className =
-            "project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden h-full flex flex-col hover:border-purple-500 transition duration-300";
+        card.className = `
+            project-card
+            group
+            bg-zinc-900
+            border border-zinc-800
+            rounded-3xl
+            overflow-hidden
+            h-full
+            flex flex-col
+            hover:border-purple-500/70
+            transition
+            duration-300
+            md:hover:-translate-y-1
+        `;
+
+
+        // Teknoloji etiketlerini oluştur
+        const techTags = project.tech
+            .map((technology) => {
+
+                return `
+                    <span
+                        class="
+                            inline-flex
+                            items-center
+                            bg-zinc-950
+                            border border-zinc-800
+                            text-zinc-400
+                            px-3 py-1.5
+                            rounded-lg
+                            text-xs
+                        "
+                    >
+                        ${technology}
+                    </span>
+                `;
+
+            })
+            .join("");
 
 
         card.innerHTML = `
 
-            <!-- Proje Görseli -->
-            <div class="w-full h-64 bg-zinc-950 overflow-hidden">
+            <!-- ====================== -->
+            <!-- PROJE GÖRSELİ -->
+            <!-- ====================== -->
+
+            <div
+                class="
+                    relative
+                    w-full
+                    h-48
+                    sm:h-56
+                    md:h-64
+                    bg-zinc-950
+                    overflow-hidden
+                "
+            >
 
                 <img
                     src="${project.image}"
                     alt="${project.title} projesi"
                     loading="lazy"
-                    class="w-full h-full object-contain transition duration-500 hover:scale-105"
+                    class="
+                        w-full
+                        h-full
+                        object-cover
+                        transition
+                        duration-500
+                        group-hover:scale-[1.03]
+                    "
                 >
+
+
+                <!-- Hafif Gradient -->
+                <div
+                    class="
+                        absolute
+                        inset-x-0
+                        bottom-0
+                        h-20
+                        bg-gradient-to-t
+                        from-zinc-900
+                        to-transparent
+                        pointer-events-none
+                    "
+                >
+                </div>
 
             </div>
 
 
-            <!-- Proje İçeriği -->
-            <div class="p-8 flex flex-col flex-grow">
+
+            <!-- ====================== -->
+            <!-- PROJE İÇERİĞİ -->
+            <!-- ====================== -->
+
+            <div
+                class="
+                    p-5
+                    sm:p-6
+                    md:p-8
+                    flex
+                    flex-col
+                    flex-grow
+                "
+            >
 
 
                 <!-- Durum -->
                 <div class="mb-4">
 
                     <span
-                        class="inline-block
-                               bg-purple-500/10
-                               text-purple-400
-                               border border-purple-500/20
-                               px-3 py-1
-                               rounded-full
-                               text-sm"
+                        class="
+                            inline-flex
+                            items-center
+                            bg-purple-500/10
+                            text-purple-400
+                            border border-purple-500/20
+                            px-3 py-1.5
+                            rounded-full
+                            text-xs
+                            font-medium
+                        "
                     >
 
                         ${project.status}
@@ -130,7 +236,15 @@ if (container) {
 
 
                 <!-- Başlık -->
-                <h2 class="text-2xl font-semibold mb-4">
+                <h2
+                    class="
+                        text-xl
+                        sm:text-2xl
+                        font-semibold
+                        mb-3
+                        tracking-tight
+                    "
+                >
 
                     ${project.title}
 
@@ -139,7 +253,16 @@ if (container) {
 
 
                 <!-- Açıklama -->
-                <p class="text-zinc-400 mb-6 flex-grow leading-relaxed">
+                <p
+                    class="
+                        text-zinc-400
+                        text-sm
+                        sm:text-base
+                        mb-5
+                        flex-grow
+                        leading-relaxed
+                    "
+                >
 
                     ${project.description}
 
@@ -147,15 +270,31 @@ if (container) {
 
 
 
+                <!-- Teknolojiler -->
+                <div
+                    class="
+                        flex
+                        flex-wrap
+                        gap-2
+                        mb-6
+                    "
+                >
+
+                    ${techTags}
+
+                </div>
+
+
+
                 <!-- Alt Kısım -->
-                <div class="mt-auto">
-
-                    <p class="text-purple-400 text-sm mb-4">
-
-                        ${project.tech}
-
-                    </p>
-
+                <div
+                    class="
+                        mt-auto
+                        pt-5
+                        border-t
+                        border-zinc-800
+                    "
+                >
 
                     ${
                         project.link
@@ -166,18 +305,26 @@ if (container) {
                                 href="${project.link}"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="inline-flex
-                                       items-center
-                                       gap-2
-                                       text-purple-400
-                                       hover:text-purple-300
-                                       font-medium
-                                       transition"
+                                class="
+                                    group/link
+                                    inline-flex
+                                    items-center
+                                    gap-2
+                                    text-purple-400
+                                    hover:text-purple-300
+                                    font-medium
+                                    transition
+                                "
                             >
 
                                 Projeyi İncele
 
-                                <span>
+                                <span
+                                    class="
+                                        transition
+                                        group-hover/link:translate-x-1
+                                    "
+                                >
                                     →
                                 </span>
 
@@ -188,12 +335,24 @@ if (container) {
                         : `
 
                             <span
-                                class="inline-flex
-                                       items-center
-                                       gap-2
-                                       text-zinc-600
-                                       font-medium"
+                                class="
+                                    inline-flex
+                                    items-center
+                                    gap-2
+                                    text-zinc-600
+                                    text-sm
+                                    font-medium
+                                "
                             >
+
+                                <span
+                                    class="
+                                        w-2 h-2
+                                        rounded-full
+                                        bg-zinc-700
+                                    "
+                                >
+                                </span>
 
                                 Proje bağlantısı yakında
 
