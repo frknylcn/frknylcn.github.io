@@ -56,11 +56,11 @@
 
     <!-- Favicon -->
     <link rel="icon"
-          href="/assets/images/favicon.png"
+          href="/favicon.png"
           type="image/png">
 
     <link rel="apple-touch-icon"
-          href="/assets/images/favicon.png">
+          href="/favicon.png">
 
     <!-- Article Structured Data -->
     <script type="application/ld+json">
@@ -106,27 +106,39 @@
 
 
     <!-- NAVIGATION -->
-    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-xl sticky top-0 z-50">
+    <nav class="border-b border-zinc-800/80
+                bg-zinc-950/90
+                backdrop-blur-xl
+                sticky top-0 z-50">
 
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto
+                    px-6 py-5
+                    flex justify-between items-center">
 
             <a href="/"
-               class="text-3xl font-bold tracking-tight hover:text-purple-400 transition">
+               class="text-2xl md:text-3xl
+                      font-bold tracking-tight
+                      hover:text-purple-400
+                      transition">
 
                 Karanlık<span class="text-purple-500">Yol</span>
 
             </a>
 
 
-            <div class="hidden md:flex items-center space-x-8 text-lg">
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex
+                        items-center
+                        space-x-7
+                        text-base">
 
                 <a href="/"
-                   class="hover:text-purple-400 transition">
+                   class="text-zinc-300 hover:text-purple-400 transition">
                     Ana Sayfa
                 </a>
 
                 <a href="/projects.html"
-                   class="hover:text-purple-400 transition">
+                   class="text-zinc-300 hover:text-purple-400 transition">
                     Projeler
                 </a>
 
@@ -136,70 +148,188 @@
                 </a>
 
                 <a href="/about.html"
-                   class="hover:text-purple-400 transition">
+                   class="text-zinc-300 hover:text-purple-400 transition">
                     Hakkımda
                 </a>
 
                 <a href="/contact.html"
-                   class="hover:text-purple-400 transition">
+                   class="bg-purple-600
+                          hover:bg-purple-700
+                          px-5 py-3
+                          rounded-xl
+                          font-medium
+                          transition">
                     İletişim
                 </a>
 
             </div>
 
 
-            <button id="menu-button"
-                    class="md:hidden text-3xl focus:outline-none"
-                    aria-label="Menüyü aç">
+            <!-- Mobil Menü Butonu -->
+            <button
+                id="menu-button"
+                class="md:hidden
+                       w-12 h-12
+                       flex items-center justify-center
+                       rounded-xl
+                       border border-zinc-800
+                       text-2xl
+                       hover:border-purple-500
+                       transition"
+                aria-label="Menüyü aç"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+
                 ☰
+
             </button>
-
-        </div>
-
-
-        <div id="mobile-menu"
-             class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
-
-            <div class="flex flex-col space-y-6 px-6 text-lg">
-
-                <a href="/"
-                   class="hover:text-purple-400">
-                    Ana Sayfa
-                </a>
-
-                <a href="/projects.html"
-                   class="hover:text-purple-400">
-                    Projeler
-                </a>
-
-                <a href="/blog.html"
-                   class="text-purple-400">
-                    Blog
-                </a>
-
-                <a href="/about.html"
-                   class="hover:text-purple-400">
-                    Hakkımda
-                </a>
-
-                <a href="/contact.html"
-                   class="hover:text-purple-400">
-                    İletişim
-                </a>
-
-            </div>
 
         </div>
 
     </nav>
 
 
+    <!-- Mobil Menü Arka Planı -->
+    <div
+        id="menu-backdrop"
+        class="hidden md:hidden
+               fixed inset-0
+               bg-black/60
+               backdrop-blur-sm
+               z-[60]">
+    </div>
 
-    <main class="max-w-4xl mx-auto px-6 py-20">
+
+    <!-- Sağdan Açılan Mobil Menü -->
+    <aside
+        id="mobile-menu"
+        aria-hidden="true"
+        class="md:hidden
+               fixed top-0 right-0
+               h-dvh
+               w-[82%]
+               max-w-sm
+               bg-zinc-950
+               border-l border-zinc-800
+               z-[70]
+               translate-x-full
+               transition-transform
+               duration-300
+               ease-out">
+
+        <div class="flex justify-between
+                    items-center
+                    px-6 py-6
+                    border-b border-zinc-800">
+
+            <p class="text-xl font-semibold">
+                Menü
+            </p>
+
+            <button
+                id="menu-close"
+                class="w-11 h-11
+                       flex items-center justify-center
+                       rounded-xl
+                       border border-zinc-800
+                       text-2xl
+                       hover:border-purple-500
+                       transition"
+                aria-label="Menüyü kapat">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="px-6 py-8">
+
+            <nav class="flex flex-col gap-3">
+
+                <a href="/"
+                   class="mobile-menu-link text-zinc-300
+                          hover:text-purple-400 hover:bg-zinc-900
+                          rounded-2xl px-5 py-4 text-lg transition">
+                    Ana Sayfa
+                </a>
+
+                <a href="/projects.html"
+                   class="mobile-menu-link text-zinc-300
+                          hover:text-purple-400 hover:bg-zinc-900
+                          rounded-2xl px-5 py-4 text-lg transition">
+                    Projeler
+                </a>
+
+                <a href="/blog.html"
+                   class="mobile-menu-link
+                          bg-purple-500/10
+                          text-purple-400
+                          border border-purple-500/20
+                          rounded-2xl px-5 py-4
+                          text-lg font-medium">
+                    Blog
+                </a>
+
+                <a href="/about.html"
+                   class="mobile-menu-link text-zinc-300
+                          hover:text-purple-400 hover:bg-zinc-900
+                          rounded-2xl px-5 py-4 text-lg transition">
+                    Hakkımda
+                </a>
+
+                <a href="/contact.html"
+                   class="mobile-menu-link text-zinc-300
+                          hover:text-purple-400 hover:bg-zinc-900
+                          rounded-2xl px-5 py-4 text-lg transition">
+                    İletişim
+                </a>
+
+            </nav>
+
+
+            <div class="border-t border-zinc-800 mt-8 pt-8">
+
+                <p class="text-zinc-500 text-sm mb-4">
+                    PROFİLLER
+                </p>
+
+                <div class="grid grid-cols-2 gap-3">
+
+                    <a href="https://github.com/frknylcn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="border border-zinc-800 hover:border-purple-500
+                              rounded-xl px-4 py-3 text-center
+                              text-zinc-300 transition">
+                        GitHub ↗
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/frknylcn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="border border-zinc-800 hover:border-purple-500
+                              rounded-xl px-4 py-3 text-center
+                              text-zinc-300 transition">
+                        LinkedIn ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="max-w-4xl mx-auto px-5 sm:px-6 py-12 md:py-20">
 
 
         <!-- HEADER -->
-        <header class="mb-12">
+        <header class="mb-9 md:mb-12">
 
             <a href="/blog.html"
                class="text-purple-400 hover:text-purple-300 font-medium">
@@ -207,17 +337,17 @@
             </a>
 
 
-            <p class="text-purple-400 text-sm font-medium mt-10 mb-4 tracking-wide">
+            <p class="text-purple-400 text-xs sm:text-sm font-medium mt-7 md:mt-10 mb-3 md:mb-4 tracking-wide">
                 WEB • GITHUB • SEO
             </p>
 
 
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-7">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-5 md:mb-7">
                 Kendi Portfolio Sitemi Geliştirirken Neler Öğrendim?
             </h1>
 
 
-            <p class="text-xl text-zinc-400 leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed">
 
                 Kendi projelerimi sergileyebileceğim bir web sitesi oluşturmak
                 amacıyla başladığım portfolio projesi zamanla yalnızca bir
@@ -228,7 +358,7 @@
             </p>
 
 
-            <div class="flex flex-wrap items-center gap-3 mt-8 text-sm text-zinc-500">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mt-6 md:mt-8 text-xs sm:text-sm text-zinc-500">
 
                 <a href="/about.html"
                    class="hover:text-purple-400 transition">
@@ -252,24 +382,24 @@
 
 
         <!-- GÖRSEL -->
-        <div class="mb-16 rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900">
+        <div class="mb-10 md:mb-16 rounded-2xl md:rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900">
 
             <img
                 src="/images/projects/portfolio.jpeg"
                 alt="Furkan Yalçın Portfolio web sitesi"
-                class="w-full max-h-[520px] object-cover">
+                class="w-full h-auto max-h-[520px] object-cover">
 
         </div>
 
 
 
         <!-- ARTICLE -->
-        <article class="space-y-14 text-zinc-300 text-lg leading-relaxed">
+        <article class="space-y-9 md:space-y-14 text-zinc-300 text-base sm:text-lg leading-relaxed">
 
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     Neden Portfolio Sitesi Yapmak İstedim?
                 </h2>
 
@@ -294,7 +424,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     HTML ve Tailwind CSS ile Arayüz
                 </h2>
 
@@ -318,7 +448,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     JavaScript ile Dinamik İçerik
                 </h2>
 
@@ -336,7 +466,7 @@
 
 
                 <div class="mt-8 border border-purple-500/20
-                            bg-purple-500/5 rounded-2xl p-7">
+                            bg-purple-500/5 rounded-2xl p-5 md:p-7">
 
                     <p class="text-purple-400 text-sm font-semibold mb-3">
                         KARŞILAŞTIĞIM PROBLEM
@@ -361,7 +491,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     GitHub Pages ile Yayınlamak
                 </h2>
 
@@ -387,7 +517,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     İletişim Formunu Çalıştırmak
                 </h2>
 
@@ -414,7 +544,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     SEO'yu Öğrenmek
                 </h2>
 
@@ -430,9 +560,9 @@
                 </p>
 
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mt-6 md:mt-8">
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             robots.txt
@@ -446,7 +576,7 @@
                     </div>
 
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             sitemap.xml
@@ -467,7 +597,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     Google Search Console
                 </h2>
 
@@ -493,7 +623,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     Kullanıcı Deneyimini Geliştirmek
                 </h2>
 
@@ -504,9 +634,9 @@
                 </p>
 
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mt-6 md:mt-8">
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             Mobil Menü
@@ -520,7 +650,7 @@
                     </div>
 
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             Scroll Animasyonları
@@ -534,7 +664,7 @@
                     </div>
 
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             404 Sayfası
@@ -548,7 +678,7 @@
                     </div>
 
 
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 md:p-6">
 
                         <h3 class="text-xl font-semibold mb-2">
                             Responsive Tasarım
@@ -569,7 +699,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     Bu Projede Neler Öğrendim?
                 </h2>
 
@@ -580,37 +710,37 @@
                 </p>
 
 
-                <div class="flex flex-wrap gap-3 mt-8">
+                <div class="flex flex-wrap gap-2.5 sm:gap-3 mt-6 md:mt-8">
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         HTML
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         CSS
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         Tailwind CSS
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         JavaScript
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         Git
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         GitHub
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         GitHub Pages
                     </span>
 
-                    <span class="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3.5 sm:px-4 py-2 rounded-xl text-sm sm:text-base">
                         SEO
                     </span>
 
@@ -622,7 +752,7 @@
 
             <section class="reveal">
 
-                <h2 class="text-3xl font-semibold text-zinc-100 mb-5">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 md:mb-5">
                     Sonuç
                 </h2>
 
@@ -651,17 +781,17 @@
 
 
         <!-- DİĞER BLOG YAZILARI -->
-        <section class="mt-20 reveal">
+        <section class="mt-14 md:mt-20 reveal">
 
             <p class="text-purple-400 font-medium mb-5">
                 DİĞER YAZILAR
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
 
                 <a href="/blog-google-play.html"
                    class="block bg-zinc-900 border border-zinc-800 hover:border-purple-500
-                          rounded-2xl p-6 transition">
+                          rounded-2xl p-5 md:p-6 transition">
 
                     <p class="text-zinc-500 text-sm mb-2">
                         ANDROID • GOOGLE PLAY
@@ -680,7 +810,7 @@
 
                 <a href="/blog-karanlik-madenci.html"
                    class="block bg-zinc-900 border border-zinc-800 hover:border-purple-500
-                          rounded-2xl p-6 transition">
+                          rounded-2xl p-5 md:p-6 transition">
 
                     <p class="text-zinc-500 text-sm mb-2">
                         GODOT • GDSCRIPT
@@ -703,20 +833,20 @@
 
 
         <!-- CTA -->
-        <section class="mt-20 reveal">
+        <section class="mt-14 md:mt-20 reveal">
 
             <div class="border border-purple-500/20
                         bg-gradient-to-br
                         from-purple-950/30
                         to-zinc-900
                         rounded-3xl
-                        p-8 md:p-10">
+                        p-6 sm:p-8 md:p-10">
 
                 <p class="text-purple-400 font-medium mb-3">
                     PORTFOLIO
                 </p>
 
-                <h2 class="text-3xl font-semibold mb-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
                     Geliştirdiğim projeleri incele.
                 </h2>
 
@@ -726,7 +856,7 @@
                 </p>
 
 
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
 
                     <a href="/projects.html"
                        class="inline-flex bg-purple-600 hover:bg-purple-700
@@ -837,25 +967,82 @@
 
     <script>
 
-        // Mobil Menü
+        // =========================
+        // MOBİL MENÜ
+        // =========================
+
         const menuBtn = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+
+        function openMobileMenu() {
+
+            mobileMenu.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+
+            menuBtn.setAttribute('aria-expanded', 'true');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+
+            document.body.style.overflow = 'hidden';
+
+        }
+
+
+        function closeMobileMenu() {
+
+            mobileMenu.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+
+            menuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+
+            document.body.style.overflow = '';
+
+        }
+
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+
+        mobileMenuLinks.forEach((link) => {
+
+            link.addEventListener('click', closeMobileMenu);
+
+        });
+
+
+        document.addEventListener('keydown', (event) => {
+
+            if (event.key === 'Escape') {
+                closeMobileMenu();
+            }
+
         });
 
 
 
-        // Back to Top
+        // =========================
+        // BACK TO TOP
+        // =========================
+
         const backToTop = document.getElementById('back-to-top');
+
 
         window.addEventListener('scroll', () => {
 
             if (window.scrollY > 400) {
+
                 backToTop.style.display = 'flex';
+
             } else {
+
                 backToTop.style.display = 'none';
+
             }
 
         });
@@ -872,31 +1059,47 @@
 
 
 
-        // Scroll Reveal
+        // =========================
+        // SCROLL REVEAL
+        // =========================
+
         const revealElements = document.querySelectorAll('.reveal');
 
-        const revealObserver = new IntersectionObserver(
-            (entries) => {
 
-                entries.forEach(entry => {
+        if ('IntersectionObserver' in window) {
 
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        revealObserver.unobserve(entry.target);
-                    }
+            const revealObserver = new IntersectionObserver(
+                (entries) => {
 
-                });
+                    entries.forEach((entry) => {
 
-            },
-            {
-                threshold: 0.10
-            }
-        );
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add('active');
+                            revealObserver.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.10
+                }
+            );
 
 
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
+            revealElements.forEach((element) => {
+                revealObserver.observe(element);
+            });
+
+        } else {
+
+            revealElements.forEach((element) => {
+                element.classList.add('active');
+            });
+
+        }
 
     </script>
 
