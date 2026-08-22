@@ -394,188 +394,254 @@
     <main>
 
 
-        <!-- ========================= -->
-        <!-- HERO -->
-        <!-- ========================= -->
+      <!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
 
-        <section class="relative min-h-[88vh] flex items-center overflow-hidden">
+<section class="relative
+                flex items-center
+                overflow-hidden
+                md:min-h-[88vh]">
 
 
-            <!-- Dekoratif Arka Plan -->
-            <div class="absolute inset-0 pointer-events-none">
+    <!-- Dekoratif Arka Plan -->
+    <div class="absolute inset-0 pointer-events-none">
 
-                <div class="absolute top-20 left-1/4
-                            w-96 h-96
-                            bg-purple-700/20
-                            rounded-full
-                            blur-[120px]">
-                </div>
+        <div class="absolute
+                    top-10 md:top-20
+                    left-1/4
+                    w-72 h-72 md:w-96 md:h-96
+                    bg-purple-700/20
+                    rounded-full
+                    blur-[120px]">
+        </div>
 
-                <div class="absolute bottom-20 right-1/4
-                            w-80 h-80
-                            bg-fuchsia-700/10
-                            rounded-full
-                            blur-[120px]">
-                </div>
+        <div class="absolute
+                    bottom-10 md:bottom-20
+                    right-1/4
+                    w-64 h-64 md:w-80 md:h-80
+                    bg-fuchsia-700/10
+                    rounded-full
+                    blur-[120px]">
+        </div>
+
+    </div>
+
+
+
+    <div class="max-w-6xl
+                mx-auto
+                px-6
+                py-16 md:py-24
+                relative z-10
+                w-full">
+
+        <div class="max-w-4xl">
+
+
+            <!-- Badge -->
+            <div class="inline-flex
+                        items-center
+                        gap-3
+                        bg-zinc-900/80
+                        border border-zinc-800
+                        rounded-full
+                        px-4 md:px-5
+                        py-2.5 md:py-3
+                        mb-6 md:mb-8">
+
+                <span class="relative flex h-3 w-3 flex-shrink-0">
+
+                    <span class="animate-ping
+                                 absolute inline-flex
+                                 h-full w-full
+                                 rounded-full
+                                 bg-purple-400
+                                 opacity-75">
+                    </span>
+
+                    <span class="relative inline-flex
+                                 rounded-full
+                                 h-3 w-3
+                                 bg-purple-500">
+                    </span>
+
+                </span>
+
+
+                <span class="text-xs sm:text-sm
+                             text-zinc-300
+                             tracking-wide">
+
+                    BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ
+
+                </span>
+
+            </div>
+
+
+
+            <!-- İsim -->
+            <h1 class="text-5xl
+                       sm:text-6xl
+                       md:text-8xl
+                       font-bold
+                       tracking-tight
+                       leading-[1.05]
+                       mb-6 md:mb-8">
+
+                Furkan
+
+                <span class="text-transparent
+                             bg-clip-text
+                             bg-gradient-to-r
+                             from-purple-400
+                             via-purple-500
+                             to-fuchsia-500">
+
+                    Yalçın
+
+                </span>
+
+            </h1>
+
+
+
+            <!-- Ana Açıklama -->
+            <p class="text-lg md:text-2xl
+                      text-zinc-400
+                      max-w-3xl
+                      leading-relaxed
+                      mb-4 md:mb-5">
+
+                Yalova Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.
+                Yazılım, mobil uygulama ve oyun projeleri geliştiriyorum.
+
+            </p>
+
+
+
+            <!-- İkinci Açıklama -->
+            <p class="text-base md:text-lg
+                      text-zinc-500
+                      max-w-2xl
+                      leading-relaxed
+                      mb-8 md:mb-10">
+
+                Godot, Java, JavaScript ve modern web teknolojilerini
+                kullanarak fikirleri çalışan projelere dönüştürmeye
+                odaklanıyorum.
+
+            </p>
+
+
+
+            <!-- Ana Butonlar -->
+            <div class="grid
+                        grid-cols-1
+                        sm:grid-cols-2
+                        gap-4
+                        max-w-2xl">
+
+
+                <!-- Projeler -->
+                <a href="/projects.html"
+                   class="group
+                          bg-purple-600
+                          hover:bg-purple-700
+                          px-6 md:px-8
+                          py-4
+                          rounded-2xl
+                          text-base md:text-lg
+                          font-semibold
+                          transition
+                          flex
+                          items-center
+                          justify-center
+                          gap-3">
+
+                    Projelerimi İncele
+
+                    <span class="group-hover:translate-x-1 transition">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- İletişim -->
+                <a href="/contact.html"
+                   class="border border-zinc-700
+                          hover:border-purple-500
+                          bg-zinc-900/40
+                          hover:bg-zinc-900
+                          px-6 md:px-8
+                          py-4
+                          rounded-2xl
+                          text-base md:text-lg
+                          font-medium
+                          transition
+                          text-center">
+
+                    Benimle İletişime Geç
+
+                </a>
 
             </div>
 
 
 
-            <div class="max-w-6xl mx-auto px-6 py-24 relative z-10 w-full">
-
-                <div class="max-w-4xl">
-
-
-                    <!-- Badge -->
-                    <div class="inline-flex items-center gap-3
-                                bg-zinc-900/80
-                                border border-zinc-800
-                                rounded-full
-                                px-5 py-3 mb-8">
-
-                        <span class="relative flex h-3 w-3">
-
-                            <span class="animate-ping
-                                         absolute inline-flex
-                                         h-full w-full
-                                         rounded-full
-                                         bg-purple-400
-                                         opacity-75">
-                            </span>
-
-                            <span class="relative inline-flex
-                                         rounded-full
-                                         h-3 w-3
-                                         bg-purple-500">
-                            </span>
-
-                        </span>
+            <!-- Sosyal Hesaplar -->
+            <div class="grid
+                        grid-cols-2
+                        gap-4
+                        max-w-md
+                        mt-4">
 
 
-                        <span class="text-sm text-zinc-300 tracking-wide">
-                            BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ
-                        </span>
+                <!-- GitHub -->
+                <a href="https://github.com/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-zinc-800
+                          hover:border-purple-500
+                          hover:text-purple-400
+                          px-5 py-4
+                          rounded-2xl
+                          text-zinc-300
+                          transition
+                          text-center">
 
-                    </div>
+                    GitHub ↗
 
-
-
-                    <!-- İsim -->
-                    <h1 class="text-6xl md:text-8xl
-                               font-bold
-                               tracking-tight
-                               leading-[1.05]
-                               mb-8">
-
-                        Furkan
-
-                        <span class="text-transparent
-                                     bg-clip-text
-                                     bg-gradient-to-r
-                                     from-purple-400
-                                     via-purple-500
-                                     to-fuchsia-500">
-
-                            Yalçın
-
-                        </span>
-
-                    </h1>
+                </a>
 
 
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/frknylcn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-zinc-800
+                          hover:border-purple-500
+                          hover:text-purple-400
+                          px-5 py-4
+                          rounded-2xl
+                          text-zinc-300
+                          transition
+                          text-center">
 
-                    <p class="text-xl md:text-2xl
-                              text-zinc-400
-                              max-w-3xl
-                              leading-relaxed
-                              mb-5">
+                    LinkedIn ↗
 
-                        Yalova Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.
-                        Yazılım, mobil uygulama ve oyun projeleri geliştiriyorum.
-
-                    </p>
-
-
-
-                    <p class="text-lg
-                              text-zinc-500
-                              max-w-2xl
-                              leading-relaxed
-                              mb-10">
-
-                        Godot, Java, JavaScript ve modern web teknolojilerini
-                        kullanarak fikirleri çalışan projelere dönüştürmeye
-                        odaklanıyorum.
-
-                    </p>
-
-
-
-                    <!-- Butonlar -->
-                    <div class="flex flex-wrap gap-4">
-
-                        <a
-                            href="/projects.html"
-                            class="group
-                                   bg-purple-600
-                                   hover:bg-purple-700
-                                   px-8 py-4
-                                   rounded-2xl
-                                   text-lg
-                                   font-semibold
-                                   transition
-                                   flex items-center gap-3">
-
-                            Projelerimi İncele
-
-                            <span class="group-hover:translate-x-1 transition">
-                                →
-                            </span>
-
-                        </a>
-
-
-                        <a
-                            href="/contact.html"
-                            class="border border-zinc-700
-                                   hover:border-purple-500
-                                   bg-zinc-900/40
-                                   hover:bg-zinc-900
-                                   px-8 py-4
-                                   rounded-2xl
-                                   text-lg
-                                   font-medium
-                                   transition">
-
-                            Benimle İletişime Geç
-
-                        </a>
-
-
-                        <a
-                            href="https://github.com/frknylcn"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="border border-zinc-800
-                                   hover:border-zinc-600
-                                   px-8 py-4
-                                   rounded-2xl
-                                   text-lg
-                                   text-zinc-300
-                                   transition">
-
-                            GitHub ↗
-
-                        </a>
-
-                    </div>
-
-                </div>
+                </a>
 
             </div>
 
-        </section>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
