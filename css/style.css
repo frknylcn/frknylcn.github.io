@@ -666,3 +666,36 @@ footer a:hover {
         transform: none;
     }
 }
+
+/* =========================
+   TEKNOLOJİ ETİKETLERİ
+   ========================= */
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0.7rem 1rem;
+
+    background: rgb(9 9 11);
+    border: 1px solid rgb(39 39 42);
+
+    border-radius: 0.9rem;
+
+    color: rgb(212 212 216);
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.tech-chip:hover {
+    border-color: rgb(168 85 247);
+    color: rgb(192 132 252);
+    transform: translateY(-2px);
+}
