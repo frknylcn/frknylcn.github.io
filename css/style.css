@@ -613,6 +613,23 @@ footer a:hover {
 }
 
 
+
+
+/* =====================================================
+   MOBILE DRAWER SCROLL
+===================================================== */
+
+#mobile-menu {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Alt kısım mobil tarayıcı çubuğunun altında kalmasın */
+#mobile-menu > div:last-child {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+}
+
 /* =====================================================
    RESPONSIVE
 ===================================================== */
