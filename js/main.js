@@ -58,9 +58,9 @@ const projects = [
 
         image: "/images/projects/haspet-defense.jpg",
 
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.furkanyalcin.haspetdefense&pcampaignid=web_share",
 
-        status: "Oyun Projesi"
+        status: "Google Play'de Yayında"
     },
 
 
