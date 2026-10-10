@@ -39,9 +39,9 @@ const projects = [
 
         image: "/images/projects/dolapta-ne-var.jpeg",
 
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.furkanyalcin.tarifonerici&pcampaignid=web_share",
 
-        status: "Android Uygulaması"
+        status: "Google Play'de Yayında"
     },
 
 
